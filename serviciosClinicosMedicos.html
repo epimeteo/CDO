@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Clínicos y Médicos – Clínica del Occidente</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f8fafd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Página: Servicios Clínicos y Médicos – Clínica del Occidente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ── Reset & base ── */
+        .cdo-clinical *,
+        .cdo-clinical *::before,
+        .cdo-clinical *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cdo-clinical p,
+        .cdo-clinical h1,
+        .cdo-clinical h2,
+        .cdo-clinical h3,
+        .cdo-clinical h4 {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .cdo-clinical,
+        .cdo-clinical h1,
+        .cdo-clinical h2,
+        .cdo-clinical h3,
+        .cdo-clinical h4,
+        .cdo-clinical p,
+        .cdo-clinical span,
+        .cdo-clinical button,
+        .cdo-clinical a,
+        .cdo-clinical div,
+        .cdo-clinical li {
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+        }
+
+        .cdo-clinical {
+            --blue-dark: #1f549e;
+            --blue-light: #00a3de;
+            --purple: #7e2baf;
+            --orange: #ff7c10;
+            --gray: #7f7f7f;
+            --gray-light: #f4f6f9;
+            --gray-soft: #e8edf4;
+            --white: #ffffff;
+            --text: #2c2c2c;
+            --shadow-sm: 0 2px 8px rgba(31, 84, 158, .08);
+            --shadow-md: 0 8px 30px rgba(31, 84, 158, .12);
+            --shadow-lg: 0 16px 48px rgba(31, 84, 158, .16);
+            --radius: 16px;
+            --transition: .35s cubic-bezier(.4, 0, .2, 1);
+            /* Spacing scale */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 36px;
+            --space-xl: 56px;
+            --space-2xl: 80px;
+
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            color: var(--text);
+            background: linear-gradient(180deg, #f8fafd 0%, #eef3fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cdo-clinical__wrap {
+            max-width: 1200px;
+            margin: 0 auto !important;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════ */
+        .cdo-hero {
+            position: relative;
+            padding: 96px 0 80px;
+            background:
+                radial-gradient(ellipse at top right, rgba(0, 163, 222, .10) 0%, transparent 60%),
+                radial-gradient(ellipse at bottom left, rgba(126, 43, 175, .08) 0%, transparent 55%),
+                linear-gradient(180deg, #f8fafd 0%, #eef3fa 100%);
+            overflow: hidden;
+        }
+
+        .cdo-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 380px;
+            height: 380px;
+            border: 1px solid rgba(31, 84, 158, .08);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cdo-hero::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(31, 84, 158, .06);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cdo-hero__content {
+            text-align: center !important;
+            max-width: 820px;
+            margin: 0 auto !important;
+        }
+
+        .cdo-hero__badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--blue-dark), var(--purple));
+            color: #fff !important;
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 7px 22px;
+            border-radius: 100px;
+            margin-bottom: var(--space-md) !important;
+            line-height: 1.4 !important;
+        }
+
+        .cdo-clinical .cdo-hero__title {
+            font-size: clamp(32px, 4.6vw, 52px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.12 !important;
+            margin: 0 0 var(--space-md) !important;
+            letter-spacing: -0.5px;
+        }
+
+        .cdo-clinical .cdo-hero__copy {
+            font-size: clamp(15px, 1.4vw, 17px) !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 auto !important;
+            max-width: 680px;
+        }
+
+        /* Hero stats */
+        .cdo-hero__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-2xl);
+        }
+
+        .cdo-hero-stat {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            box-shadow: var(--shadow-sm);
+            text-align: center !important;
+            transition: transform var(--transition), box-shadow var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .cdo-hero-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cdo-hero__stats>.cdo-hero-stat:nth-child(1) {
+            border-top-color: var(--blue-light);
+        }
+
+        .cdo-hero__stats>.cdo-hero-stat:nth-child(2) {
+            border-top-color: var(--purple);
+        }
+
+        .cdo-hero__stats>.cdo-hero-stat:nth-child(3) {
+            border-top-color: var(--orange);
+        }
+
+        .cdo-hero-stat__icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-sm) !important;
+        }
+
+        .cdo-hero__stats>.cdo-hero-stat:nth-child(1) .cdo-hero-stat__icon {
+            background: linear-gradient(135deg, #e8f1fc, #d0e5fa);
+        }
+
+        .cdo-hero__stats>.cdo-hero-stat:nth-child(2) .cdo-hero-stat__icon {
+            background: linear-gradient(135deg, #f0e5f8, #e0ccf0);
+        }
+
+        .cdo-hero__stats>.cdo-hero-stat:nth-child(3) .cdo-hero-stat__icon {
+            background: linear-gradient(135deg, #fff0e0, #ffe0c0);
+        }
+
+        .cdo-clinical .cdo-hero-stat__title {
+            font-size: 16.5px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.3 !important;
+            margin: 0 0 8px !important;
+        }
+
+        .cdo-clinical .cdo-hero-stat__desc {
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.55 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     SECTION COMMONS
+     ════════════════════════════════════════ */
+        .cdo-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .cdo-section--alt {
+            background: var(--white);
+        }
+
+        .cdo-section__head {
+            text-align: center !important;
+            max-width: 760px;
+            margin: 0 auto var(--space-xl) !important;
+        }
+
+        .cdo-section__eyebrow {
+            display: inline-block;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-clinical .cdo-section__title {
+            font-size: clamp(26px, 3.2vw, 38px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-clinical .cdo-section__lead {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     FEATURED PAIR (Cirugía plástica + bariátrica)
+     ════════════════════════════════════════ */
+        .cdo-featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            align-items: stretch;
+        }
+
+        .cdo-featured-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition), box-shadow var(--transition);
+            height: 100%;
+            position: relative;
+        }
+
+        .cdo-featured-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cdo-featured-card__topbar {
+            height: 8px;
+            width: 100%;
+        }
+
+        .cdo-featured-card--plastica .cdo-featured-card__topbar {
+            background: linear-gradient(90deg, var(--blue-light), var(--blue-dark));
+        }
+
+        .cdo-featured-card--bariatrica .cdo-featured-card__topbar {
+            background: linear-gradient(90deg, var(--purple), var(--blue-light));
+        }
+
+        .cdo-featured-card__body {
+            padding: 40px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .cdo-featured-card__header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: var(--space-md) !important;
+        }
+
+        .cdo-featured-card__icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cdo-featured-card--plastica .cdo-featured-card__icon {
+            background: linear-gradient(135deg, #e8f1fc, #d0e5fa);
+            color: var(--blue-dark);
+        }
+
+        .cdo-featured-card--bariatrica .cdo-featured-card__icon {
+            background: linear-gradient(135deg, #f0e5f8, #e0ccf0);
+            color: var(--purple);
+        }
+
+        .cdo-clinical .cdo-featured-card__title {
+            font-size: clamp(22px, 2.4vw, 28px) !important;
+            font-weight: 800 !important;
+            line-height: 1.2 !important;
+            margin: 0 !important;
+        }
+
+        .cdo-featured-card--plastica .cdo-featured-card__title {
+            color: var(--blue-dark) !important;
+        }
+
+        .cdo-featured-card--bariatrica .cdo-featured-card__title {
+            color: var(--purple) !important;
+        }
+
+        .cdo-clinical .cdo-featured-card__copy {
+            font-size: 14.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 0 var(--space-lg) !important;
+        }
+
+        .cdo-block-label {
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--blue-dark);
+            margin: 0 0 var(--space-sm) !important;
+            padding: 0 0 10px !important;
+            border-bottom: 2px solid var(--gray-soft);
+            display: block;
+        }
+
+        .cdo-bullet-list {
+            list-style: none !important;
+            margin: 0 0 var(--space-lg) !important;
+            padding: 0 !important;
+        }
+
+        .cdo-bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0 !important;
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            color: #3a3a3a;
+            line-height: 1.5 !important;
+        }
+
+        .cdo-bullet-list li:not(:last-child) {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cdo-bullet-list .check-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .cdo-featured-card--plastica .check-icon {
+            background: #e8f4fd;
+            color: var(--blue-light);
+        }
+
+        .cdo-featured-card--bariatrica .check-icon {
+            background: #f3e8fc;
+            color: var(--purple);
+        }
+
+        .cdo-bullet-list .check-icon svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* CTA buttons (universal) */
+        .cdo-clinical .cdo-btn {
+            display: inline-block;
+            padding: 14px 30px !important;
+            border-radius: 100px;
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            text-align: center !important;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition);
+            color: #ffffff !important;
+            line-height: 1.4 !important;
+        }
+
+        .cdo-clinical .cdo-btn:visited,
+        .cdo-clinical .cdo-btn:hover,
+        .cdo-clinical .cdo-btn:active,
+        .cdo-clinical .cdo-btn:focus {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .cdo-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        .cdo-btn--block {
+            display: block !important;
+            width: 100%;
+            margin-top: auto !important;
+        }
+
+        .cdo-btn--blue {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+            box-shadow: 0 6px 18px rgba(31, 84, 158, .22);
+        }
+
+        .cdo-btn--purple {
+            background: linear-gradient(135deg, var(--purple), #a855d6);
+            box-shadow: 0 6px 18px rgba(126, 43, 175, .22);
+        }
+
+        .cdo-btn--orange {
+            background: linear-gradient(135deg, var(--orange), #ff9a40);
+            box-shadow: 0 6px 18px rgba(255, 124, 16, .25);
+        }
+
+        .cdo-clinical .cdo-btn--ghost {
+            background: transparent;
+            color: var(--blue-dark) !important;
+            border: 2px solid var(--blue-dark);
+        }
+
+        .cdo-clinical .cdo-btn--ghost:hover {
+            background: var(--blue-dark);
+            color: #fff !important;
+        }
+
+        /* ════════════════════════════════════════
+     PROGRAM BLOCKS (alternating left/right)
+     Clínica obesidad / Chequeos / Medicina preventiva
+     ════════════════════════════════════════ */
+        .cdo-program {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+            padding: var(--space-xl) 0;
+        }
+
+        .cdo-program+.cdo-program {
+            border-top: 1px solid var(--gray-soft);
+        }
+
+        .cdo-program--reverse .cdo-program__visual {
+            order: 2;
+        }
+
+        .cdo-program--reverse .cdo-program__content {
+            order: 1;
+        }
+
+        .cdo-program__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin: 0 0 var(--space-sm) !important;
+            padding: 6px 14px;
+            border-radius: 100px;
+        }
+
+        .cdo-program--obesidad .cdo-program__eyebrow {
+            color: var(--blue-light);
+            background: rgba(0, 163, 222, .10);
+        }
+
+        .cdo-program--chequeos .cdo-program__eyebrow {
+            color: var(--purple);
+            background: rgba(126, 43, 175, .10);
+        }
+
+        .cdo-program--preventiva .cdo-program__eyebrow {
+            color: var(--orange);
+            background: rgba(255, 124, 16, .12);
+        }
+
+        .cdo-clinical .cdo-program__title {
+            font-size: clamp(26px, 3vw, 36px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-md) !important;
+        }
+
+        .cdo-clinical .cdo-program__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.7 !important;
+            margin: 0 0 var(--space-lg) !important;
+        }
+
+        .cdo-program__cta-wrap {
+            margin-top: var(--space-md) !important;
+        }
+
+        /* Visual side: stacked feature cards */
+        .cdo-program__visual {
+            position: relative;
+        }
+
+        .cdo-feature-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .cdo-feature-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 22px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border-left: 4px solid transparent;
+        }
+
+        .cdo-feature-card:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cdo-program--obesidad .cdo-feature-card {
+            border-left-color: var(--blue-light);
+        }
+
+        .cdo-program--chequeos .cdo-feature-card {
+            border-left-color: var(--purple);
+        }
+
+        .cdo-program--preventiva .cdo-feature-card {
+            border-left-color: var(--orange);
+        }
+
+        .cdo-feature-card__icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cdo-program--obesidad .cdo-feature-card__icon {
+            background: rgba(0, 163, 222, .10);
+            color: var(--blue-light);
+        }
+
+        .cdo-program--chequeos .cdo-feature-card__icon {
+            background: rgba(126, 43, 175, .10);
+            color: var(--purple);
+        }
+
+        .cdo-program--preventiva .cdo-feature-card__icon {
+            background: rgba(255, 124, 16, .12);
+            color: var(--orange);
+        }
+
+        .cdo-feature-card__text {
+            flex: 1;
+        }
+
+        .cdo-clinical .cdo-feature-card__title {
+            font-size: 14.5px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.35 !important;
+            margin: 0 0 4px !important;
+        }
+
+        .cdo-clinical .cdo-feature-card__desc {
+            font-size: 13px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     HOSPITAL TRIO (Hospitalización / Urgencias / Rehabilitación)
+     ════════════════════════════════════════ */
+        .cdo-trio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            align-items: stretch;
+        }
+
+        .cdo-trio-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 36px 30px;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition), box-shadow var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cdo-trio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .cdo-trio-card:nth-child(1)::before {
+            background: linear-gradient(90deg, var(--blue-dark), var(--blue-light));
+        }
+
+        .cdo-trio-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #e04040, var(--orange));
+        }
+
+        .cdo-trio-card:nth-child(3)::before {
+            background: linear-gradient(90deg, var(--purple), var(--blue-light));
+        }
+
+        .cdo-trio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cdo-trio-card__icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 var(--space-md) !important;
+        }
+
+        .cdo-trio-card:nth-child(1) .cdo-trio-card__icon {
+            background: linear-gradient(135deg, #e8f1fc, #d0e5fa);
+            color: var(--blue-dark);
+        }
+
+        .cdo-trio-card:nth-child(2) .cdo-trio-card__icon {
+            background: linear-gradient(135deg, #ffe0e0, #ffe8d0);
+            color: #e04040;
+        }
+
+        .cdo-trio-card:nth-child(3) .cdo-trio-card__icon {
+            background: linear-gradient(135deg, #f0e5f8, #e0ccf0);
+            color: var(--purple);
+        }
+
+        .cdo-clinical .cdo-trio-card__title {
+            font-size: 19px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.3 !important;
+            margin: 0 0 12px !important;
+        }
+
+        .cdo-clinical .cdo-trio-card__copy {
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.6 !important;
+            margin: 0 0 var(--space-md) !important;
+        }
+
+        .cdo-trio-card__divider {
+            height: 1px;
+            background: var(--gray-soft);
+            margin: 0 0 var(--space-md);
+        }
+
+        .cdo-trio-card__sublabel {
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--blue-dark);
+            margin: 0 0 12px !important;
+            display: block;
+        }
+
+        .cdo-trio-card__list {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .cdo-trio-card__list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 7px 0 !important;
+            font-size: 13px !important;
+            font-weight: 400 !important;
+            color: #3a3a3a;
+            line-height: 1.5 !important;
+        }
+
+        .cdo-trio-card__list li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-top: 8px;
+        }
+
+        .cdo-trio-card:nth-child(1) .cdo-trio-card__list li::before {
+            background: var(--blue-light);
+        }
+
+        .cdo-trio-card:nth-child(2) .cdo-trio-card__list li::before {
+            background: #e04040;
+        }
+
+        .cdo-trio-card:nth-child(3) .cdo-trio-card__list li::before {
+            background: var(--purple);
+        }
+
+        /* ════════════════════════════════════════
+     APPOINTMENT BAND
+     ════════════════════════════════════════ */
+        .cdo-appointment {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, #2a6dc0 50%, var(--purple) 100%);
+            border-radius: 24px;
+            padding: 56px 48px;
+            text-align: center !important;
+            color: #fff !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cdo-appointment::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 280px;
+            height: 280px;
+            border: 1.5px solid rgba(255, 255, 255, .1);
+            border-radius: 50%;
+        }
+
+        .cdo-appointment::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -60px;
+            width: 240px;
+            height: 240px;
+            border: 1.5px solid rgba(255, 255, 255, .08);
+            border-radius: 50%;
+        }
+
+        .cdo-clinical .cdo-appointment__title {
+            font-size: clamp(26px, 3vw, 36px) !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.2 !important;
+            margin: 0 0 12px !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-clinical .cdo-appointment__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, .9) !important;
+            line-height: 1.6 !important;
+            margin: 0 auto var(--space-lg) !important;
+            max-width: 540px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-appointment__buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-clinical .cdo-btn--white {
+            background: #fff;
+            color: var(--blue-dark) !important;
+        }
+
+        .cdo-clinical .cdo-btn--white:hover {
+            color: var(--blue-dark) !important;
+            background: #fff;
+        }
+
+        .cdo-clinical .cdo-btn--outline-white {
+            background: transparent;
+            color: #fff !important;
+            border: 2px solid rgba(255, 255, 255, .6);
+        }
+
+        .cdo-clinical .cdo-btn--outline-white:hover {
+            background: rgba(255, 255, 255, .12);
+            color: #fff !important;
+        }
+
+        /* ════════════════════════════════════════
+     WHY US
+     ════════════════════════════════════════ */
+        .cdo-why {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 56px 48px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cdo-why__head {
+            text-align: center !important;
+            max-width: 720px;
+            margin: 0 auto var(--space-xl) !important;
+        }
+
+        .cdo-clinical .cdo-why__title {
+            font-size: clamp(24px, 2.8vw, 34px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-clinical .cdo-why__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 !important;
+        }
+
+        .cdo-why__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+
+        .cdo-why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 22px 24px;
+            background: var(--gray-light);
+            border-radius: 14px;
+            transition: background var(--transition), transform var(--transition);
+        }
+
+        .cdo-why-item:hover {
+            background: #eaf1fa;
+            transform: translateX(3px);
+        }
+
+        .cdo-why-item__num {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+        }
+
+        .cdo-why__grid>.cdo-why-item:nth-child(1) .cdo-why-item__num {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+        }
+
+        .cdo-why__grid>.cdo-why-item:nth-child(2) .cdo-why-item__num {
+            background: linear-gradient(135deg, var(--purple), #a855d6);
+        }
+
+        .cdo-why__grid>.cdo-why-item:nth-child(3) .cdo-why-item__num {
+            background: linear-gradient(135deg, var(--orange), #ff9a40);
+        }
+
+        .cdo-why__grid>.cdo-why-item:nth-child(4) .cdo-why-item__num {
+            background: linear-gradient(135deg, var(--blue-light), var(--purple));
+        }
+
+        .cdo-clinical .cdo-why-item__title {
+            font-size: 15.5px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.3 !important;
+            margin: 0 0 6px !important;
+        }
+
+        .cdo-clinical .cdo-why-item__desc {
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.55 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     BLOG + NEWSLETTER (split)
+     ════════════════════════════════════════ */
+        .cdo-blog-news {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
+        .cdo-blog-card,
+        .cdo-news-card {
+            border-radius: var(--radius);
+            padding: 44px 40px;
+            color: #fff !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px;
+        }
+
+        .cdo-blog-card {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-light) 100%);
+        }
+
+        .cdo-news-card {
+            background: linear-gradient(135deg, var(--purple) 0%, #a855d6 60%, var(--orange) 130%);
+        }
+
+        .cdo-blog-card::after,
+        .cdo-news-card::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            border: 1.5px solid rgba(255, 255, 255, .12);
+            border-radius: 50%;
+        }
+
+        .cdo-blog-card__eyebrow,
+        .cdo-news-card__eyebrow {
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .85) !important;
+            margin: 0 0 var(--space-sm) !important;
+            display: block;
+        }
+
+        .cdo-clinical .cdo-blog-card__title,
+        .cdo-clinical .cdo-news-card__title {
+            font-size: clamp(22px, 2.3vw, 26px) !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.25 !important;
+            margin: 0 0 var(--space-sm) !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-clinical .cdo-blog-card__copy,
+        .cdo-clinical .cdo-news-card__copy {
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, .92) !important;
+            line-height: 1.6 !important;
+            margin: 0 0 var(--space-md) !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-blog-card__action,
+        .cdo-news-card__action {
+            position: relative;
+            z-index: 1;
+            align-self: flex-start;
+        }
+
+        /* Newsletter form */
+        .cdo-news-form {
+            display: flex;
+            gap: 8px;
+            background: rgba(255, 255, 255, .15);
+            border-radius: 100px;
+            padding: 6px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            max-width: 420px;
+        }
+
+        .cdo-clinical .cdo-news-form__input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 12px 18px !important;
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+            font-size: 13.5px !important;
+            color: #fff !important;
+            outline: none;
+        }
+
+        .cdo-news-form__input::placeholder {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .cdo-clinical .cdo-news-form__btn {
+            background: #fff;
+            color: var(--purple) !important;
+            border: none;
+            border-radius: 100px;
+            padding: 10px 22px !important;
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+            font-size: 13.5px !important;
+            font-weight: 700 !important;
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none !important;
+        }
+
+        .cdo-news-form__btn:hover {
+            transform: scale(1.04);
+        }
+
+        /* ════════════════════════════════════════
+     RESPONSIVE
+     ════════════════════════════════════════ */
+        @media (max-width: 960px) {
+            .cdo-hero {
+                padding: 64px 0 56px;
+            }
+
+            .cdo-section {
+                padding: 56px 0;
+            }
+
+            .cdo-hero__stats,
+            .cdo-featured-grid,
+            .cdo-trio,
+            .cdo-why__grid,
+            .cdo-blog-news {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .cdo-hero__stats {
+                margin-top: 48px;
+            }
+
+            .cdo-program {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 40px 0;
+            }
+
+            .cdo-program--reverse .cdo-program__visual,
+            .cdo-program--reverse .cdo-program__content {
+                order: initial;
+            }
+
+            .cdo-featured-card__body {
+                padding: 32px 24px 28px;
+            }
+
+            .cdo-featured-card__header {
+                gap: 12px;
+            }
+
+            .cdo-featured-card__icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .cdo-appointment {
+                padding: 40px 28px;
+                border-radius: 18px;
+            }
+
+            .cdo-appointment__buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cdo-clinical .cdo-appointment .cdo-btn {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .cdo-why {
+                padding: 40px 28px;
+            }
+
+            .cdo-blog-card,
+            .cdo-news-card {
+                padding: 36px 28px;
+                min-height: 240px;
+            }
+
+            .cdo-news-form {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 961px) and (max-width: 1100px) {
+            .cdo-program {
+                gap: 36px;
+            }
+
+            .cdo-featured-card__body {
+                padding: 32px 28px 28px;
+            }
+        }
+    </style>
+
+    <div class="cdo-clinical">
+
+        <!-- ═══════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════ -->
+        <section class="cdo-hero">
+            <div class="cdo-clinical__wrap">
+                <div class="cdo-hero__content">
+                    <span class="cdo-hero__badge">Servicios Clínicos y Médicos</span>
+                    <h1 class="cdo-hero__title">Servicios clínicos y médicos para cuidar tu salud</h1>
+                    <p class="cdo-hero__copy">Prevención, diagnóstico, tratamiento y recuperación en un solo lugar. Con
+                        un equipo médico a tu lado en cada momento de tu atención.</p>
+                </div>
+
+                <div class="cdo-hero__stats">
+                    <div class="cdo-hero-stat">
+                        <div class="cdo-hero-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#1f549e" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-hero-stat__title">Equipo médico especializado</h3>
+                        <p class="cdo-hero-stat__desc">Atención liderada por especialistas con amplia experiencia.</p>
+                    </div>
+                    <div class="cdo-hero-stat">
+                        <div class="cdo-hero-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7e2baf" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-hero-stat__title">Atención integral</h3>
+                        <p class="cdo-hero-stat__desc">Diagnóstico, tratamiento y seguimiento en un solo lugar.</p>
+                    </div>
+                    <div class="cdo-hero-stat">
+                        <div class="cdo-hero-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ff7c10" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-hero-stat__title">Seguridad hospitalaria</h3>
+                        <p class="cdo-hero-stat__desc">Infraestructura y protocolos para procedimientos complejos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       FEATURED PAIR: Cirugía plástica + Cirugía bariátrica
+       ═══════════════════════════════════════ -->
+        <section class="cdo-section cdo-section--alt">
+            <div class="cdo-clinical__wrap">
+                <div class="cdo-section__head">
+                    <span class="cdo-section__eyebrow">Servicios destacados</span>
+                    <h2 class="cdo-section__title">Procedimientos quirúrgicos especializados</h2>
+                    <p class="cdo-section__lead">Programas con valoración integral, equipo certificado y acompañamiento
+                        médico antes, durante y después de tu procedimiento.</p>
+                </div>
+
+                <div class="cdo-featured-grid">
+
+                    <!-- Cirugía plástica -->
+                    <div class="cdo-featured-card cdo-featured-card--plastica">
+                        <div class="cdo-featured-card__topbar"></div>
+                        <div class="cdo-featured-card__body">
+                            <div class="cdo-featured-card__header">
+                                <div class="cdo-featured-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                                        <path d="M12 2v4" />
+                                        <path d="M8 6h8" />
+                                        <path d="M12 6v12" />
+                                        <path d="M9 22h6" />
+                                        <circle cx="12" cy="14" r="4" />
+                                    </svg>
+                                </div>
+                                <h3 class="cdo-featured-card__title">Cirugía plástica y estética</h3>
+                            </div>
+                            <p class="cdo-featured-card__copy">Procedimientos estéticos pensados para armonizar tu
+                                cuerpo con seguridad. Evaluamos tu caso de forma personalizada para lograr resultados
+                                naturales y acordes a ti.</p>
+
+                            <div class="cdo-block-label">¿Qué puedes esperar?</div>
+                            <ul class="cdo-bullet-list">
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Cirujanos plásticos certificados y con amplia experiencia</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Quirófanos con tecnología especializada</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Acompañamiento médico antes, durante y después del procedimiento
+                                </li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Resultados naturales con prioridad en tu seguridad</li>
+                            </ul>
+
+                            <div class="cdo-block-label">Opciones de tratamiento</div>
+                            <ul class="cdo-bullet-list">
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span><strong style="color:#1f549e;">Cirugía
+                                        corporal:</strong>&nbsp;liposucción, mamoplastia, lipectomía y más</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span><strong style="color:#1f549e;">Cirugía
+                                        facial:</strong>&nbsp;rinoplastia, blefaroplastia, lifting facial y más</li>
+                            </ul>
+
+                            <a href="https://agenda-cirugia-estetica.clinicadeloccidente.com/cirugia-estetica-planes"
+                                class="cdo-btn cdo-btn--blue cdo-btn--block">Quiero agendar mi valoración</a>
+                        </div>
+                    </div>
+
+                    <!-- Cirugía bariátrica -->
+                    <div class="cdo-featured-card cdo-featured-card--bariatrica">
+                        <div class="cdo-featured-card__topbar"></div>
+                        <div class="cdo-featured-card__body">
+                            <div class="cdo-featured-card__header">
+                                <div class="cdo-featured-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 12h8" />
+                                        <path d="M12 8v8" />
+                                    </svg>
+                                </div>
+                                <h3 class="cdo-featured-card__title">Cirugía bariátrica</h3>
+                            </div>
+                            <p class="cdo-featured-card__copy">Tratamientos quirúrgicos para el manejo de la obesidad y
+                                enfermedades metabólicas, con un enfoque médico integral. Evaluamos tu caso de forma
+                                personalizada para ofrecerte una opción segura y adecuada para tu salud.</p>
+
+                            <div class="cdo-block-label">¿Qué puedes esperar?</div>
+                            <ul class="cdo-bullet-list">
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Valoración integral por un equipo multidisciplinario</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Procedimientos mínimamente invasivos (laparoscopia)</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Cirujanos especializados en cirugía bariátrica</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Seguimiento médico y nutricional después de la cirugía</li>
+                            </ul>
+
+                            <div class="cdo-block-label">Opciones de tratamiento</div>
+                            <ul class="cdo-bullet-list">
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Bypass gástrico (Roux-en-Y)</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Manga gástrica (gastrectomía vertical)</li>
+                                <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12" />
+                                        </svg></span>Derivación biliopancreática con cruce duodenal</li>
+                            </ul>
+
+                            <a href="https://agenda-cirugia-estetica.clinicadeloccidente.com/cirugia-bariatrica-planes"
+                                class="cdo-btn cdo-btn--purple cdo-btn--block">Quiero agendar mi valoración</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       PROGRAMS (alternating)
+       ═══════════════════════════════════════ -->
+        <section class="cdo-section">
+            <div class="cdo-clinical__wrap">
+
+                <!-- Clínica de la obesidad -->
+                <div class="cdo-program cdo-program--obesidad">
+                    <div class="cdo-program__content">
+                        <span class="cdo-program__eyebrow">Programa Integral</span>
+                        <h2 class="cdo-program__title">Clínica de la obesidad</h2>
+                        <p class="cdo-program__copy">Transforma tu salud con un enfoque integral basado en ciencia y
+                            acompañamiento médico. Evaluamos tu caso de forma completa para ofrecerte un tratamiento
+                            personalizado que va más allá de las dietas.</p>
+
+                        <div class="cdo-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-bullet-list" style="margin-bottom: 32px !important;">
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Evaluación por un equipo multidisciplinario en un solo lugar</li>
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Tratamientos ajustados a tu condición y objetivos</li>
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Respaldo de una clínica de alta complejidad</li>
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Control y acompañamiento durante todo el proceso</li>
+                        </ul>
+
+                        <div class="cdo-program__cta-wrap">
+                            <a href="#" class="cdo-btn cdo-btn--blue">Quiero agendar mi valoración</a>
+                        </div>
+                    </div>
+
+                    <div class="cdo-program__visual">
+                        <div class="cdo-block-label" style="text-align:center !important;">Opciones de tratamiento</div>
+                        <div class="cdo-feature-stack">
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M12 7v5l3 3" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Manejo médico integral</h4>
+                                    <p class="cdo-feature-card__desc">Control metabólico y tratamiento farmacológico
+                                        (GLP-1).</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <path d="M3 12a9 9 0 1 0 9-9" />
+                                        <path d="M3 12h6" />
+                                        <path d="M12 3v6" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Procedimientos endoscópicos</h4>
+                                    <p class="cdo-feature-card__desc">Balón gástrico, TORe y reesleeve endoscópico.</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <path d="M8 2v4" />
+                                        <path d="M16 2v4" />
+                                        <rect width="18" height="18" x="3" y="4" rx="2" />
+                                        <path d="M3 10h18" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Cirugía bariátrica</h4>
+                                    <p class="cdo-feature-card__desc">Manga gástrica y bypass.</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <path
+                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Apoyo complementario</h4>
+                                    <p class="cdo-feature-card__desc">Nutrición clínica, psicología y medicina del
+                                        deporte.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chequeos ejecutivos (reverse) -->
+                <div class="cdo-program cdo-program--chequeos cdo-program--reverse">
+                    <div class="cdo-program__visual">
+                        <div class="cdo-block-label" style="text-align:center !important;">Opciones de chequeo</div>
+                        <div class="cdo-feature-stack">
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Chequeo básico y esencial</h4>
+                                    <p class="cdo-feature-card__desc">Evaluación general con exámenes clínicos y
+                                        valoración médica.</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                        <polyline points="14 2 14 8 20 8" />
+                                        <line x1="9" y1="13" x2="15" y2="13" />
+                                        <line x1="9" y1="17" x2="15" y2="17" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Chequeo integral</h4>
+                                    <p class="cdo-feature-card__desc">Análisis más completo con estudios avanzados y
+                                        diagnóstico ampliado.</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Chequeos especializados</h4>
+                                    <p class="cdo-feature-card__desc">Cardiovascular y gastrointestinal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cdo-program__content">
+                        <span class="cdo-program__eyebrow">Salud Ejecutiva</span>
+                        <h2 class="cdo-program__title">Chequeos ejecutivos</h2>
+                        <p class="cdo-program__copy">Evalúa tu estado de salud de forma integral con chequeos diseñados
+                            para detectar a tiempo, prevenir riesgos y darte claridad sobre tu bienestar.</p>
+
+                        <div class="cdo-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-bullet-list" style="margin-bottom: 32px !important;">
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Identificación de riesgos antes de que aparezcan síntomas</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Exámenes clínicos, imágenes diagnósticas y valoraciones en un solo
+                                proceso</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Enfoque en enfermedades cardiovasculares, metabólicas y
+                                gastrointestinales</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Diagnóstico completo con recomendaciones según tu perfil</li>
+                        </ul>
+
+                        <div class="cdo-program__cta-wrap">
+                            <a href="https://chequeos-ejecutivos.clinicadeloccidente.com/chequeos-ejecutivos-medicos-planes"
+                                class="cdo-btn cdo-btn--purple">Quiero agendar mi chequeo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medicina preventiva -->
+                <div class="cdo-program cdo-program--preventiva">
+                    <div class="cdo-program__content">
+                        <span class="cdo-program__eyebrow">Prevención</span>
+                        <h2 class="cdo-program__title">Medicina preventiva</h2>
+                        <p class="cdo-program__copy">La prevención no empieza cuando aparecen los síntomas. Empieza
+                            cuando decides entender tu salud a tiempo.</p>
+
+                        <div class="cdo-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-bullet-list" style="margin-bottom: 32px !important;">
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Consultas médicas, laboratorio e imágenes en un solo proceso</li>
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Identificación de riesgos antes de que evolucionen</li>
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Todo tu chequeo en una sola jornada</li>
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Tecnología y soporte de una institución de alta complejidad</li>
+                        </ul>
+
+                        <div class="cdo-program__cta-wrap">
+                            <a href="#" class="cdo-btn cdo-btn--orange">Conoce tu plan ideal</a>
+                        </div>
+                    </div>
+
+                    <div class="cdo-program__visual">
+                        <div class="cdo-block-label" style="text-align:center !important;">Opciones de plan</div>
+                        <div class="cdo-feature-stack">
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <circle cx="12" cy="8" r="5" />
+                                        <path d="M20 21a8 8 0 1 0-16 0" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Mujer Vital</h4>
+                                    <p class="cdo-feature-card__desc">Evaluación integral de la salud femenina.</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <path
+                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Hombre Activo</h4>
+                                    <p class="cdo-feature-card__desc">Enfoque en salud cardiovascular y prostática.</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Deportista Pro</h4>
+                                    <p class="cdo-feature-card__desc">Control médico y optimización del rendimiento
+                                        físico.</p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <circle cx="11" cy="11" r="8" />
+                                        <path d="m21 21-4.3-4.3" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Detección oncológica temprana</h4>
+                                    <p class="cdo-feature-card__desc">Identificación oportuna de riesgos silenciosos.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cdo-feature-card">
+                                <div class="cdo-feature-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                        <path
+                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                    </svg>
+                                </div>
+                                <div class="cdo-feature-card__text">
+                                    <h4 class="cdo-feature-card__title">Bienestar Senior</h4>
+                                    <p class="cdo-feature-card__desc">Seguimiento integral para mayores de 60 años.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       HOSPITAL TRIO
+       ═══════════════════════════════════════ -->
+        <section class="cdo-section cdo-section--alt">
+            <div class="cdo-clinical__wrap">
+                <div class="cdo-section__head">
+                    <span class="cdo-section__eyebrow">Capacidad Hospitalaria</span>
+                    <h2 class="cdo-section__title">Atención hospitalaria de alta complejidad</h2>
+                    <p class="cdo-section__lead">Infraestructura moderna, equipo interdisciplinario y respuesta
+                        inmediata las 24 horas.</p>
+                </div>
+
+                <div class="cdo-trio">
+
+                    <!-- Hospitalización -->
+                    <div class="cdo-trio-card">
+                        <div class="cdo-trio-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                                <path d="M3 7h18v13H3z" />
+                                <path d="M3 7l3-4h12l3 4" />
+                                <path d="M12 11v4" />
+                                <path d="M10 13h4" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-trio-card__title">Hospitalización y cirugía de alta complejidad</h3>
+                        <p class="cdo-trio-card__copy">Áreas diseñadas para brindar atención segura, oportuna y enfocada
+                            en tu recuperación, con respaldo de un equipo interdisciplinario y una infraestructura
+                            moderna.</p>
+
+                        <div class="cdo-trio-card__divider"></div>
+                        <span class="cdo-trio-card__sublabel">Qué puedes esperar</span>
+                        <ul class="cdo-trio-card__list">
+                            <li>267 camas entre hospitalización y cuidado crítico</li>
+                            <li>UCI y cuidado intermedio con monitoreo permanente</li>
+                            <li>11 salas de cirugía completamente dotadas</li>
+                            <li>Habitaciones diseñadas para tu bienestar y recuperación</li>
+                        </ul>
+
+                        <div class="cdo-trio-card__divider" style="margin-top: 24px;"></div>
+                        <span class="cdo-trio-card__sublabel">Servicios disponibles</span>
+                        <ul class="cdo-trio-card__list">
+                            <li>Hospitalización general y suites</li>
+                            <li>Unidad de Cuidados Intensivos (UCI) adultos</li>
+                            <li>Cuidado intermedio</li>
+                            <li>Cirugías de mediana y alta complejidad</li>
+                        </ul>
+                    </div>
+
+                    <!-- Urgencias -->
+                    <div class="cdo-trio-card">
+                        <div class="cdo-trio-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                                <path d="m13 2-3 7h4l-3 7" />
+                                <circle cx="12" cy="12" r="10" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-trio-card__title">Servicio de urgencias 24/7</h3>
+                        <p class="cdo-trio-card__copy">Atención oportuna y especializada para emergencias médicas y
+                            traumatológicas, con capacidad de respuesta inmediata y respaldo de un hospital de alta
+                            complejidad.</p>
+
+                        <div class="cdo-trio-card__divider"></div>
+                        <span class="cdo-trio-card__sublabel">Qué puedes esperar</span>
+                        <ul class="cdo-trio-card__list">
+                            <li>Servicio disponible las 24 horas, todos los días</li>
+                            <li>Manejo de urgencias médicas y traumatológicas</li>
+                            <li>Acceso a hospitalización, cirugía y UCI según necesidad</li>
+                            <li>Profesionales con experiencia en atención de emergencias</li>
+                        </ul>
+
+                        <div class="cdo-trio-card__divider" style="margin-top: 24px;"></div>
+                        <span class="cdo-trio-card__sublabel">Servicios disponibles</span>
+                        <ul class="cdo-trio-card__list">
+                            <li>Urgencias médicas y quirúrgicas</li>
+                            <li>Atención de trauma y accidentes (ARL / SOAT)</li>
+                            <li>Triage y observación continua</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rehabilitación -->
+                    <div class="cdo-trio-card">
+                        <div class="cdo-trio-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                                <path d="M6 2v6a6 6 0 0 0 12 0V2" />
+                                <path d="M6 22v-6a6 6 0 0 1 12 0v6" />
+                                <line x1="4" y1="2" x2="20" y2="2" />
+                                <line x1="4" y1="22" x2="20" y2="22" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-trio-card__title">Rehabilitación física y pulmonar</h3>
+                        <p class="cdo-trio-card__copy">Programas de rehabilitación diseñados para mejorar tu movilidad,
+                            función respiratoria y calidad de vida, con atención personalizada para pacientes
+                            hospitalizados y ambulatorios.</p>
+
+                        <div class="cdo-trio-card__divider"></div>
+                        <span class="cdo-trio-card__sublabel">Qué puedes esperar</span>
+                        <ul class="cdo-trio-card__list">
+                            <li>Rehabilitación física y pulmonar</li>
+                            <li>Fisiatras, fisioterapeutas y terapeutas ocupacionales</li>
+                            <li>Equipos para monitoreo y terapias avanzadas</li>
+                            <li>Citas disponibles en tiempos ágiles</li>
+                        </ul>
+
+                        <div class="cdo-trio-card__divider" style="margin-top: 24px;"></div>
+                        <span class="cdo-trio-card__sublabel">Servicios destacados</span>
+                        <ul class="cdo-trio-card__list">
+                            <li>Terapia física y rehabilitación funcional</li>
+                            <li>Rehabilitación cardiopulmonar</li>
+                            <li>Laboratorio de función pulmonar</li>
+                            <li>Terapia ocupacional y electrodiagnóstico</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       APPOINTMENT
+       ═══════════════════════════════════════ -->
+        <section class="cdo-section">
+            <div class="cdo-clinical__wrap">
+                <div class="cdo-appointment">
+                    <h2 class="cdo-appointment__title">Agenda tu cita</h2>
+                    <p class="cdo-appointment__copy">Estamos listos para acompañarte. Elige la modalidad que mejor se
+                        ajuste a tu necesidad.</p>
+                    <div class="cdo-appointment__buttons">
+                        <a href="#agendar-eps" class="cdo-btn cdo-btn--white">Agendar tu cita de EPS</a>
+                        <a href="#agendar-particular" class="cdo-btn cdo-btn--outline-white">Agendar tu cita
+                            particular</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       WHY US
+       ═══════════════════════════════════════ -->
+        <section class="cdo-section cdo-section--alt">
+            <div class="cdo-clinical__wrap">
+                <div class="cdo-why">
+                    <div class="cdo-why__head">
+                        <h2 class="cdo-why__title">¿Por qué elegir el cuidado clínico de la Clínica del Occidente?</h2>
+                        <p class="cdo-why__copy">Brindamos atención integral con el respaldo de un hospital de alta
+                            complejidad, combinando capacidad resolutiva, seguridad clínica y un enfoque centrado en el
+                            paciente.</p>
+                    </div>
+
+                    <div class="cdo-why__grid">
+                        <div class="cdo-why-item">
+                            <div class="cdo-why-item__num">1</div>
+                            <div>
+                                <h3 class="cdo-why-item__title">Atención ágil</h3>
+                                <p class="cdo-why-item__desc">Procesos diseñados para reducir tiempos y facilitar tu
+                                    experiencia.</p>
+                            </div>
+                        </div>
+                        <div class="cdo-why-item">
+                            <div class="cdo-why-item__num">2</div>
+                            <div>
+                                <h3 class="cdo-why-item__title">Seguridad del paciente</h3>
+                                <p class="cdo-why-item__desc">Protocolos clínicos que priorizan tu bienestar en cada
+                                    etapa.</p>
+                            </div>
+                        </div>
+                        <div class="cdo-why-item">
+                            <div class="cdo-why-item__num">3</div>
+                            <div>
+                                <h3 class="cdo-why-item__title">Enfoque humano</h3>
+                                <p class="cdo-why-item__desc">Acompañamiento cercano durante todo tu proceso de
+                                    atención.</p>
+                            </div>
+                        </div>
+                        <div class="cdo-why-item">
+                            <div class="cdo-why-item__num">4</div>
+                            <div>
+                                <h3 class="cdo-why-item__title">Resolución integral</h3>
+                                <p class="cdo-why-item__desc">Consulta, diagnóstico y tratamiento en un solo lugar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       BLOG + NEWSLETTER
+       ═══════════════════════════════════════ -->
+        <section class="cdo-section">
+            <div class="cdo-clinical__wrap">
+                <div class="cdo-blog-news">
+
+                    <div class="cdo-blog-card">
+                        <div>
+                            <span class="cdo-blog-card__eyebrow">Nuestro blog</span>
+                            <h3 class="cdo-blog-card__title">Cuidémonos mejor</h3>
+                            <p class="cdo-blog-card__copy">Encuentra en nuestro blog una fuente virtual de noticias e
+                                información de interés para mejorar tu salud y la de tu familia.</p>
+                        </div>
+                        <div class="cdo-blog-card__action">
+                            <a href="https://www.clinicadeloccidente.com/noticias/cuidemonos-mejor/"
+                                class="cdo-btn cdo-btn--white">Leer más</a>
+                        </div>
+                    </div>
+
+                    <div class="cdo-news-card">
+                        <div>
+                            <span class="cdo-news-card__eyebrow">Boletín mensual</span>
+                            <h3 class="cdo-news-card__title">Suscríbete a nuestro boletín</h3>
+                            <p class="cdo-news-card__copy">Recibe noticias, consejos de salud y novedades de la Clínica
+                                del Occidente directamente en tu correo.</p>
+                        </div>
+                        <form class="cdo-news-form"
+                            onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+                            <input type="email" class="cdo-news-form__input" placeholder="Tu correo electrónico"
+                                required>
+                            <button type="submit" class="cdo-news-form__btn">Suscribirme</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

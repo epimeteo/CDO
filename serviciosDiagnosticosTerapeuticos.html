@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Diagnósticos y Terapéuticos – Clínica del Occidente</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f8fafd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Página: Servicios Diagnósticos y Terapéuticos – Clínica del Occidente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ── Reset & base ── */
+        .cdo-diag *,
+        .cdo-diag *::before,
+        .cdo-diag *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cdo-diag p,
+        .cdo-diag h1,
+        .cdo-diag h2,
+        .cdo-diag h3,
+        .cdo-diag h4 {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .cdo-diag,
+        .cdo-diag h1,
+        .cdo-diag h2,
+        .cdo-diag h3,
+        .cdo-diag h4,
+        .cdo-diag p,
+        .cdo-diag span,
+        .cdo-diag button,
+        .cdo-diag a,
+        .cdo-diag div,
+        .cdo-diag li,
+        .cdo-diag input {
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+        }
+
+        .cdo-diag {
+            --blue-dark: #1f549e;
+            --blue-light: #00a3de;
+            --purple: #7e2baf;
+            --orange: #ff7c10;
+            --gray: #7f7f7f;
+            --gray-light: #f4f6f9;
+            --gray-soft: #e8edf4;
+            --white: #ffffff;
+            --text: #2c2c2c;
+            --shadow-sm: 0 2px 8px rgba(31, 84, 158, .08);
+            --shadow-md: 0 8px 30px rgba(31, 84, 158, .12);
+            --shadow-lg: 0 16px 48px rgba(31, 84, 158, .16);
+            --radius: 16px;
+            --transition: .35s cubic-bezier(.4, 0, .2, 1);
+            /* Spacing scale */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 36px;
+            --space-xl: 56px;
+            --space-2xl: 80px;
+
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            color: var(--text);
+            background: linear-gradient(180deg, #f8fafd 0%, #eef3fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cdo-diag__wrap {
+            max-width: 1200px;
+            margin: 0 auto !important;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════ */
+        .cdo-d-hero {
+            position: relative;
+            padding: 96px 0 80px;
+            background:
+                radial-gradient(ellipse at top left, rgba(0, 163, 222, .12) 0%, transparent 55%),
+                radial-gradient(ellipse at bottom right, rgba(126, 43, 175, .08) 0%, transparent 55%),
+                linear-gradient(180deg, #f8fafd 0%, #eef3fa 100%);
+            overflow: hidden;
+        }
+
+        /* Decorative scan-line rings */
+        .cdo-d-hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -200px;
+            width: 500px;
+            height: 500px;
+            border: 1px dashed rgba(0, 163, 222, .18);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .cdo-d-hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -120px;
+            width: 340px;
+            height: 340px;
+            border: 1px dashed rgba(126, 43, 175, .12);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .cdo-d-hero__content {
+            text-align: center !important;
+            max-width: 860px;
+            margin: 0 auto !important;
+            position: relative;
+        }
+
+        .cdo-d-hero__badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+            color: #fff !important;
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 7px 22px;
+            border-radius: 100px;
+            margin-bottom: var(--space-md) !important;
+            line-height: 1.4 !important;
+        }
+
+        .cdo-diag .cdo-d-hero__title {
+            font-size: clamp(32px, 4.6vw, 52px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.12 !important;
+            margin: 0 0 var(--space-md) !important;
+            letter-spacing: -0.5px;
+        }
+
+        .cdo-diag .cdo-d-hero__copy {
+            font-size: clamp(15px, 1.4vw, 17px) !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 auto !important;
+            max-width: 660px;
+        }
+
+        /* Hero stats */
+        .cdo-d-hero__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-2xl);
+        }
+
+        .cdo-d-stat {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            box-shadow: var(--shadow-sm);
+            text-align: center !important;
+            transition: transform var(--transition), box-shadow var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .cdo-d-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cdo-d-hero__stats>.cdo-d-stat:nth-child(1) {
+            border-top-color: var(--blue-light);
+        }
+
+        .cdo-d-hero__stats>.cdo-d-stat:nth-child(2) {
+            border-top-color: var(--purple);
+        }
+
+        .cdo-d-hero__stats>.cdo-d-stat:nth-child(3) {
+            border-top-color: var(--orange);
+        }
+
+        .cdo-d-stat__icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-sm) !important;
+        }
+
+        .cdo-d-hero__stats>.cdo-d-stat:nth-child(1) .cdo-d-stat__icon {
+            background: linear-gradient(135deg, #e8f1fc, #d0e5fa);
+        }
+
+        .cdo-d-hero__stats>.cdo-d-stat:nth-child(2) .cdo-d-stat__icon {
+            background: linear-gradient(135deg, #f0e5f8, #e0ccf0);
+        }
+
+        .cdo-d-hero__stats>.cdo-d-stat:nth-child(3) .cdo-d-stat__icon {
+            background: linear-gradient(135deg, #fff0e0, #ffe0c0);
+        }
+
+        .cdo-diag .cdo-d-stat__title {
+            font-size: 16.5px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.3 !important;
+            margin: 0 0 8px !important;
+        }
+
+        .cdo-diag .cdo-d-stat__desc {
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.55 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     SECTION COMMONS
+     ════════════════════════════════════════ */
+        .cdo-d-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .cdo-d-section--alt {
+            background: var(--white);
+        }
+
+        .cdo-d-section__head {
+            text-align: center !important;
+            max-width: 780px;
+            margin: 0 auto var(--space-xl) !important;
+        }
+
+        .cdo-d-section__eyebrow {
+            display: inline-block;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-diag .cdo-d-section__title {
+            font-size: clamp(26px, 3.2vw, 38px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-diag .cdo-d-section__lead {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     UNIVERSAL BUTTONS
+     ════════════════════════════════════════ */
+        .cdo-diag .cdo-d-btn {
+            display: inline-block;
+            padding: 14px 30px !important;
+            border-radius: 100px;
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            text-align: center !important;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition);
+            color: #ffffff !important;
+            line-height: 1.4 !important;
+        }
+
+        .cdo-diag .cdo-d-btn:visited,
+        .cdo-diag .cdo-d-btn:hover,
+        .cdo-diag .cdo-d-btn:active,
+        .cdo-diag .cdo-d-btn:focus {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .cdo-d-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        .cdo-d-btn--blue {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+            box-shadow: 0 6px 18px rgba(31, 84, 158, .22);
+        }
+
+        .cdo-d-btn--purple {
+            background: linear-gradient(135deg, var(--purple), #a855d6);
+            box-shadow: 0 6px 18px rgba(126, 43, 175, .22);
+        }
+
+        .cdo-d-btn--orange {
+            background: linear-gradient(135deg, var(--orange), #ff9a40);
+            box-shadow: 0 6px 18px rgba(255, 124, 16, .25);
+        }
+
+        .cdo-diag .cdo-d-btn--white {
+            background: #fff;
+            color: var(--blue-dark) !important;
+        }
+
+        .cdo-diag .cdo-d-btn--white:hover {
+            color: var(--blue-dark) !important;
+            background: #fff;
+        }
+
+        .cdo-diag .cdo-d-btn--outline-white {
+            background: transparent;
+            color: #fff !important;
+            border: 2px solid rgba(255, 255, 255, .6);
+        }
+
+        .cdo-diag .cdo-d-btn--outline-white:hover {
+            background: rgba(255, 255, 255, .12);
+            color: #fff !important;
+        }
+
+        /* Block label (shared across sections) */
+        .cdo-d-block-label {
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--blue-dark);
+            margin: 0 0 var(--space-sm) !important;
+            padding: 0 0 10px !important;
+            border-bottom: 2px solid var(--gray-soft);
+            display: block;
+        }
+
+        /* Shared bullet list */
+        .cdo-d-bullets {
+            list-style: none !important;
+            margin: 0 0 var(--space-lg) !important;
+            padding: 0 !important;
+        }
+
+        .cdo-d-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0 !important;
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            color: #3a3a3a;
+            line-height: 1.5 !important;
+        }
+
+        .cdo-d-bullets li:not(:last-child) {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cdo-d-bullets .check-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .cdo-d-bullets .check-icon svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* ════════════════════════════════════════
+     DIAGNOSTIC STUDY BLOCKS (alternating split layout)
+     ════════════════════════════════════════ */
+        .cdo-d-study {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+            padding: var(--space-xl) 0;
+        }
+
+        .cdo-d-study+.cdo-d-study {
+            border-top: 1px solid var(--gray-soft);
+        }
+
+        .cdo-d-study--reverse .cdo-d-study__visual {
+            order: 2;
+        }
+
+        .cdo-d-study--reverse .cdo-d-study__content {
+            order: 1;
+        }
+
+        .cdo-d-study__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cdo-d-study__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin: 0 0 var(--space-sm) !important;
+            padding: 6px 14px;
+            border-radius: 100px;
+            align-self: flex-start;
+        }
+
+        .cdo-d-study--imagenes .cdo-d-study__eyebrow {
+            color: var(--blue-light);
+            background: rgba(0, 163, 222, .10);
+        }
+
+        .cdo-d-study--resonancia .cdo-d-study__eyebrow {
+            color: var(--purple);
+            background: rgba(126, 43, 175, .10);
+        }
+
+        .cdo-d-study--laboratorio .cdo-d-study__eyebrow {
+            color: var(--orange);
+            background: rgba(255, 124, 16, .12);
+        }
+
+        .cdo-d-study--cimo .cdo-d-study__eyebrow {
+            color: var(--blue-dark);
+            background: rgba(31, 84, 158, .10);
+        }
+
+        .cdo-d-study--endoscopia .cdo-d-study__eyebrow {
+            color: var(--purple);
+            background: rgba(126, 43, 175, .10);
+        }
+
+        .cdo-diag .cdo-d-study__title {
+            font-size: clamp(26px, 3vw, 36px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-md) !important;
+        }
+
+        .cdo-diag .cdo-d-study__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.7 !important;
+            margin: 0 0 var(--space-lg) !important;
+        }
+
+        .cdo-d-study__highlight {
+            background: linear-gradient(135deg, rgba(0, 163, 222, .08), rgba(126, 43, 175, .06));
+            border-left: 3px solid var(--blue-light);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin: 0 0 var(--space-lg) !important;
+            font-size: 13.5px !important;
+            font-weight: 600 !important;
+            color: var(--blue-dark);
+            line-height: 1.5 !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cdo-d-study__highlight svg {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            color: var(--blue-light);
+        }
+
+        .cdo-d-study__cta-wrap {
+            margin-top: var(--space-sm) !important;
+        }
+
+        /* Study visual: "device panel" */
+        .cdo-d-study__visual {
+            position: relative;
+        }
+
+        .cdo-d-panel {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 30px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cdo-d-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+        }
+
+        .cdo-d-study--imagenes .cdo-d-panel::before {
+            background: linear-gradient(90deg, var(--blue-dark), var(--blue-light));
+        }
+
+        .cdo-d-study--resonancia .cdo-d-panel::before {
+            background: linear-gradient(90deg, var(--purple), var(--blue-light));
+        }
+
+        .cdo-d-study--laboratorio .cdo-d-panel::before {
+            background: linear-gradient(90deg, var(--orange), var(--purple));
+        }
+
+        .cdo-d-study--cimo .cdo-d-panel::before {
+            background: linear-gradient(90deg, var(--blue-dark), var(--purple));
+        }
+
+        .cdo-d-study--endoscopia .cdo-d-panel::before {
+            background: linear-gradient(90deg, var(--purple), var(--orange));
+        }
+
+        .cdo-d-panel__head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 16px;
+            margin-bottom: 20px !important;
+            border-bottom: 1px solid var(--gray-soft);
+        }
+
+        .cdo-d-panel__icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cdo-d-study--imagenes .cdo-d-panel__icon {
+            background: rgba(0, 163, 222, .10);
+            color: var(--blue-light);
+        }
+
+        .cdo-d-study--resonancia .cdo-d-panel__icon {
+            background: rgba(126, 43, 175, .10);
+            color: var(--purple);
+        }
+
+        .cdo-d-study--laboratorio .cdo-d-panel__icon {
+            background: rgba(255, 124, 16, .12);
+            color: var(--orange);
+        }
+
+        .cdo-d-study--cimo .cdo-d-panel__icon {
+            background: rgba(31, 84, 158, .10);
+            color: var(--blue-dark);
+        }
+
+        .cdo-d-study--endoscopia .cdo-d-panel__icon {
+            background: rgba(126, 43, 175, .10);
+            color: var(--purple);
+        }
+
+        .cdo-diag .cdo-d-panel__title {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.3 !important;
+            margin: 0 !important;
+        }
+
+        .cdo-d-studies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .cdo-d-study-tag {
+            background: var(--gray-light);
+            border-radius: 10px;
+            padding: 14px 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 13px !important;
+            font-weight: 500 !important;
+            color: #3a3a3a;
+            line-height: 1.45 !important;
+            transition: background var(--transition), transform var(--transition);
+        }
+
+        .cdo-d-study-tag:hover {
+            background: #eaf1fa;
+            transform: translateY(-1px);
+        }
+
+        .cdo-d-study-tag__dot {
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+
+        .cdo-d-study--imagenes .cdo-d-study-tag__dot {
+            background: var(--blue-light);
+        }
+
+        .cdo-d-study--resonancia .cdo-d-study-tag__dot {
+            background: var(--purple);
+        }
+
+        .cdo-d-study--laboratorio .cdo-d-study-tag__dot {
+            background: var(--orange);
+        }
+
+        .cdo-d-study--cimo .cdo-d-study-tag__dot {
+            background: var(--blue-dark);
+        }
+
+        .cdo-d-study--endoscopia .cdo-d-study-tag__dot {
+            background: var(--purple);
+        }
+
+        .cdo-d-studies-grid--single {
+            grid-template-columns: 1fr;
+        }
+
+        /* Endoscopia: dual sub-panels */
+        .cdo-d-endo-cols {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .cdo-d-endo-block {
+            background: var(--gray-light);
+            border-radius: 12px;
+            padding: 18px 20px;
+        }
+
+        .cdo-diag .cdo-d-endo-block__title {
+            font-size: 12.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--purple);
+            margin: 0 0 12px !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cdo-d-endo-block__title::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--purple);
+            border-radius: 50%;
+        }
+
+        .cdo-d-endo-list {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .cdo-d-endo-list li {
+            font-size: 13px !important;
+            font-weight: 500 !important;
+            color: #3a3a3a;
+            line-height: 1.5 !important;
+            padding: 6px 0 !important;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .cdo-d-endo-list li::before {
+            content: '→';
+            color: var(--purple);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ════════════════════════════════════════
+     APPOINTMENT BAND
+     ════════════════════════════════════════ */
+        .cdo-d-appointment {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-light) 50%, var(--purple) 100%);
+            border-radius: 24px;
+            padding: 56px 48px;
+            text-align: center !important;
+            color: #fff !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cdo-d-appointment::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 280px;
+            height: 280px;
+            border: 1.5px solid rgba(255, 255, 255, .1);
+            border-radius: 50%;
+        }
+
+        .cdo-d-appointment::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -60px;
+            width: 240px;
+            height: 240px;
+            border: 1.5px solid rgba(255, 255, 255, .08);
+            border-radius: 50%;
+        }
+
+        .cdo-diag .cdo-d-appointment__title {
+            font-size: clamp(26px, 3vw, 36px) !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.2 !important;
+            margin: 0 0 12px !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-diag .cdo-d-appointment__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, .9) !important;
+            line-height: 1.6 !important;
+            margin: 0 auto var(--space-lg) !important;
+            max-width: 540px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-d-appointment__buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ════════════════════════════════════════
+     WHY US with doctor testimonial
+     ════════════════════════════════════════ */
+        .cdo-d-why {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .cdo-d-why__main {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 48px 44px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cdo-diag .cdo-d-why__title {
+            font-size: clamp(24px, 2.8vw, 34px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-md) !important;
+        }
+
+        .cdo-diag .cdo-d-why__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.7 !important;
+            margin: 0 0 var(--space-lg) !important;
+        }
+
+        .cdo-d-why__list {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .cdo-d-why__list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 0 !important;
+            border-bottom: 1px solid var(--gray-soft);
+        }
+
+        .cdo-d-why__list li:last-child {
+            border-bottom: none;
+        }
+
+        .cdo-d-why__list li .check-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+            color: #fff !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .cdo-d-why__list li .check-icon svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .cdo-diag .cdo-d-why__list li strong {
+            font-size: 14.5px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            display: block;
+            margin: 0 0 4px !important;
+            line-height: 1.3 !important;
+        }
+
+        .cdo-diag .cdo-d-why__list li span.desc {
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.55 !important;
+        }
+
+        /* Doctor testimonial card */
+        .cdo-d-doctor {
+            background: linear-gradient(160deg, var(--blue-dark) 0%, #2a6dc0 55%, var(--purple) 110%);
+            border-radius: var(--radius);
+            padding: 44px 36px;
+            color: #fff !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cdo-d-doctor::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 220px;
+            height: 220px;
+            border: 1.5px solid rgba(255, 255, 255, .14);
+            border-radius: 50%;
+        }
+
+        .cdo-d-doctor::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 180px;
+            height: 180px;
+            border: 1.5px solid rgba(255, 255, 255, .1);
+            border-radius: 50%;
+        }
+
+        .cdo-d-doctor__quote-icon {
+            font-size: 68px !important;
+            font-weight: 800 !important;
+            line-height: 1 !important;
+            color: rgba(255, 255, 255, .25) !important;
+            margin-bottom: 12px !important;
+            position: relative;
+            z-index: 1;
+            font-family: Georgia, serif !important;
+        }
+
+        .cdo-diag .cdo-d-doctor__text {
+            font-size: 15.5px !important;
+            font-weight: 500 !important;
+            font-style: italic;
+            color: rgba(255, 255, 255, .95) !important;
+            line-height: 1.65 !important;
+            margin: 0 0 var(--space-lg) !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-d-doctor__author {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, .2);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-d-doctor__avatar {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fff, #e8f1fc);
+            color: var(--blue-dark) !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px !important;
+            font-weight: 800 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+        }
+
+        .cdo-d-doctor__info {
+            flex: 1;
+        }
+
+        .cdo-diag .cdo-d-doctor__name {
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            color: #fff !important;
+            line-height: 1.3 !important;
+            margin: 0 0 3px !important;
+        }
+
+        .cdo-diag .cdo-d-doctor__role {
+            font-size: 12.5px !important;
+            font-weight: 500 !important;
+            color: rgba(255, 255, 255, .8) !important;
+            line-height: 1.3 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     BLOG + NEWSLETTER (split)
+     ════════════════════════════════════════ */
+        .cdo-d-blog-news {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
+        .cdo-d-blog-card,
+        .cdo-d-news-card {
+            border-radius: var(--radius);
+            padding: 44px 40px;
+            color: #fff !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 280px;
+        }
+
+        .cdo-d-blog-card {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-light) 100%);
+        }
+
+        .cdo-d-news-card {
+            background: linear-gradient(135deg, var(--purple) 0%, #a855d6 60%, var(--orange) 130%);
+        }
+
+        .cdo-d-blog-card::after,
+        .cdo-d-news-card::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            border: 1.5px solid rgba(255, 255, 255, .12);
+            border-radius: 50%;
+        }
+
+        .cdo-d-blog-card__eyebrow,
+        .cdo-d-news-card__eyebrow {
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .85) !important;
+            margin: 0 0 var(--space-sm) !important;
+            display: block;
+        }
+
+        .cdo-diag .cdo-d-blog-card__title,
+        .cdo-diag .cdo-d-news-card__title {
+            font-size: clamp(22px, 2.3vw, 26px) !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.25 !important;
+            margin: 0 0 var(--space-sm) !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-diag .cdo-d-blog-card__copy,
+        .cdo-diag .cdo-d-news-card__copy {
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, .92) !important;
+            line-height: 1.6 !important;
+            margin: 0 0 var(--space-md) !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-d-blog-card__action {
+            position: relative;
+            z-index: 1;
+            align-self: flex-start;
+        }
+
+        /* Newsletter form */
+        .cdo-d-news-form {
+            display: flex;
+            gap: 8px;
+            background: rgba(255, 255, 255, .15);
+            border-radius: 100px;
+            padding: 6px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            max-width: 420px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-diag .cdo-d-news-form__input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 12px 18px !important;
+            font-size: 13.5px !important;
+            color: #fff !important;
+            outline: none;
+        }
+
+        .cdo-d-news-form__input::placeholder {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .cdo-diag .cdo-d-news-form__btn {
+            background: #fff;
+            color: var(--purple) !important;
+            border: none;
+            border-radius: 100px;
+            padding: 10px 22px !important;
+            font-size: 13.5px !important;
+            font-weight: 700 !important;
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none !important;
+        }
+
+        .cdo-d-news-form__btn:hover {
+            transform: scale(1.04);
+        }
+
+        /* ════════════════════════════════════════
+     RESPONSIVE
+     ════════════════════════════════════════ */
+        @media (max-width: 960px) {
+            .cdo-d-hero {
+                padding: 64px 0 56px;
+            }
+
+            .cdo-d-section {
+                padding: 56px 0;
+            }
+
+            .cdo-d-hero__stats,
+            .cdo-d-blog-news {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .cdo-d-hero__stats {
+                margin-top: 48px;
+            }
+
+            .cdo-d-study {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 40px 0;
+            }
+
+            .cdo-d-study--reverse .cdo-d-study__visual,
+            .cdo-d-study--reverse .cdo-d-study__content {
+                order: initial;
+            }
+
+            .cdo-d-studies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cdo-d-why {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .cdo-d-why__main {
+                padding: 36px 28px;
+            }
+
+            .cdo-d-doctor {
+                padding: 36px 28px;
+            }
+
+            .cdo-d-appointment {
+                padding: 40px 28px;
+                border-radius: 18px;
+            }
+
+            .cdo-d-appointment__buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cdo-diag .cdo-d-appointment .cdo-d-btn {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .cdo-d-panel {
+                padding: 28px 22px;
+            }
+
+            .cdo-d-blog-card,
+            .cdo-d-news-card {
+                padding: 36px 28px;
+                min-height: 240px;
+            }
+
+            .cdo-d-news-form {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 961px) and (max-width: 1100px) {
+            .cdo-d-study {
+                gap: 36px;
+            }
+
+            .cdo-d-panel {
+                padding: 28px 24px;
+            }
+
+            .cdo-d-why__main {
+                padding: 36px 28px;
+            }
+
+            .cdo-d-doctor {
+                padding: 36px 28px;
+            }
+        }
+    </style>
+
+    <div class="cdo-diag">
+
+        <!-- ═══════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════ -->
+        <section class="cdo-d-hero">
+            <div class="cdo-diag__wrap">
+                <div class="cdo-d-hero__content">
+                    <span class="cdo-d-hero__badge">Diagnósticos y Terapéuticos</span>
+                    <h1 class="cdo-d-hero__title">Diagnósticos precisos para devolverte la tranquilidad</h1>
+                    <p class="cdo-d-hero__copy">No buscas un examen, buscas una respuesta clara. Resultados confiables
+                        con tecnología avanzada y especialistas.</p>
+                </div>
+
+                <div class="cdo-d-hero__stats">
+                    <div class="cdo-d-stat">
+                        <div class="cdo-d-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#1f549e" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-d-stat__title">Tecnología avanzada</h3>
+                        <p class="cdo-d-stat__desc">Equipos de última generación para estudios precisos.</p>
+                    </div>
+                    <div class="cdo-d-stat">
+                        <div class="cdo-d-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7e2baf" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-d-stat__title">Resultados oportunos</h3>
+                        <p class="cdo-d-stat__desc">Procesos ágiles para reducir tiempos de espera.</p>
+                    </div>
+                    <div class="cdo-d-stat">
+                        <div class="cdo-d-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ff7c10" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-d-stat__title">Apoyo clínico especializado</h3>
+                        <p class="cdo-d-stat__desc">Interpretación médica experta para decisiones seguras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       DIAGNOSTIC STUDIES (alternating)
+       ═══════════════════════════════════════ -->
+        <section class="cdo-d-section cdo-d-section--alt">
+            <div class="cdo-diag__wrap">
+
+                <div class="cdo-d-section__head">
+                    <span class="cdo-d-section__eyebrow">Nuestros servicios</span>
+                    <h2 class="cdo-d-section__title">Estudios diagnósticos disponibles</h2>
+                    <p class="cdo-d-section__lead">Contamos con distintas modalidades de diagnóstico por imagen,
+                        laboratorio clínico y procedimientos especializados, con el respaldo de un hospital de alta
+                        complejidad.</p>
+                </div>
+
+                <!-- Imágenes diagnósticas -->
+                <div class="cdo-d-study cdo-d-study--imagenes">
+                    <div class="cdo-d-study__content">
+                        <span class="cdo-d-study__eyebrow">Imagenología</span>
+                        <h2 class="cdo-d-study__title">Imágenes diagnósticas</h2>
+                        <p class="cdo-d-study__copy">Integramos diferentes estudios de imágenes diagnósticas para
+                            detectar y evaluar condiciones de salud, desde lesiones óseas hasta patologías internas
+                            complejas.</p>
+
+                        <div class="cdo-d-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-d-bullets">
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Diagnósticos confiables y de alta precisión</li>
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Atención integral para pacientes de urgencias, hospitalización y
+                                consulta externa</li>
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Procesos seguros y acompañamiento profesional</li>
+                            <li><span class="check-icon" style="background:#e8f4fd;color:#00a3de;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Resultados oportunos para una atención ágil</li>
+                        </ul>
+
+                        <div class="cdo-d-study__cta-wrap">
+                            <a href="https://chequeos-ejecutivos.clinicadeloccidente.com/imagenes-diagnosticas"
+                                class="cdo-d-btn cdo-d-btn--blue">Agenda tu imagen como paciente particular</a>
+                        </div>
+                    </div>
+
+                    <div class="cdo-d-study__visual">
+                        <div class="cdo-d-panel">
+                            <div class="cdo-d-panel__head">
+                                <div class="cdo-d-panel__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <path d="M3 9h18" />
+                                        <path d="M9 21V9" />
+                                    </svg>
+                                </div>
+                                <h4 class="cdo-d-panel__title">Estudios destacados</h4>
+                            </div>
+                            <div class="cdo-d-studies-grid">
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Rayos X digitales
+                                    (tórax, cráneo, columna y extremidades)</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Ecografías
+                                    especializadas (obstétrica, fetoplacentaria y de tercer nivel)</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Ecografías
+                                    convencionales y Doppler</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Tomografía (TAC
+                                    Helicoidal)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resonancia magnética (reverse) -->
+                <div class="cdo-d-study cdo-d-study--resonancia cdo-d-study--reverse">
+                    <div class="cdo-d-study__visual">
+                        <div class="cdo-d-panel">
+                            <div class="cdo-d-panel__head">
+                                <div class="cdo-d-panel__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <circle cx="12" cy="12" r="4" />
+                                        <path d="M12 2v4" />
+                                        <path d="M12 18v4" />
+                                        <path d="M2 12h4" />
+                                        <path d="M18 12h4" />
+                                    </svg>
+                                </div>
+                                <h4 class="cdo-d-panel__title">Estudios destacados</h4>
+                            </div>
+                            <div class="cdo-d-studies-grid">
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Cerebro y columna
+                                </div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Abdomen y pelvis
+                                </div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Articulaciones:
+                                    hombro y rodilla</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Articulaciones:
+                                    cadera, tobillo y pie</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cdo-d-study__content">
+                        <span class="cdo-d-study__eyebrow">Alta Resolución</span>
+                        <h2 class="cdo-d-study__title">Resonancia magnética</h2>
+                        <p class="cdo-d-study__copy">Obtenemos imágenes de alta precisión para detectar y evaluar
+                            diferentes condiciones de salud, especialmente en áreas como neurología, oncología y
+                            traumatología.</p>
+
+                        <div class="cdo-d-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-d-bullets">
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Imágenes de alta resolución para diagnósticos más precisos</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Acompañamiento profesional durante todo el estudio</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Procedimientos seguros y confortables</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Resultados oportunos para una atención ágil</li>
+                        </ul>
+
+                        <div class="cdo-d-study__cta-wrap">
+                            <a href="https://chequeos-ejecutivos.clinicadeloccidente.com/resonancia-magnetica"
+                                class="cdo-d-btn cdo-d-btn--purple">Agenda tu estudio como paciente particular</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laboratorio clínico -->
+                <div class="cdo-d-study cdo-d-study--laboratorio">
+                    <div class="cdo-d-study__content">
+                        <span class="cdo-d-study__eyebrow">24 horas</span>
+                        <h2 class="cdo-d-study__title">Laboratorio clínico</h2>
+                        <p class="cdo-d-study__copy">Realizamos exámenes de laboratorio que apoyan el diagnóstico,
+                            seguimiento y prevención de diferentes condiciones de salud, con resultados confiables y
+                            oportunos.</p>
+
+                        <div class="cdo-d-study__highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span>Atendemos pacientes particulares sin cita previa, las 24 horas.</span>
+                        </div>
+
+                        <div class="cdo-d-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-d-bullets">
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Atención y procesamiento de muestras</li>
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Resultados precisos y confiables</li>
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Manejo seguro y confidencial de tu información</li>
+                            <li><span class="check-icon" style="background:#fff3e6;color:#ff7c10;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Apoyo oportuno para decisiones médicas</li>
+                        </ul>
+
+                        <div class="cdo-d-study__cta-wrap">
+                            <a href="https://planesespeciales.clinicadeloccidente.com/laboratorio-clinico"
+                                class="cdo-d-btn cdo-d-btn--orange">Conoce más de nuestro laboratorio clínico</a>
+                        </div>
+                    </div>
+
+                    <div class="cdo-d-study__visual">
+                        <div class="cdo-d-panel">
+                            <div class="cdo-d-panel__head">
+                                <div class="cdo-d-panel__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                        <path d="M10 2v7.31" />
+                                        <path d="M14 9.3V2" />
+                                        <path d="M8.5 2h7" />
+                                        <path d="M14 9.3a6.5 6.5 0 1 1-4 0" />
+                                    </svg>
+                                </div>
+                                <h4 class="cdo-d-panel__title">Estudios destacados</h4>
+                            </div>
+                            <div class="cdo-d-studies-grid cdo-d-studies-grid--single">
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Pruebas de rutina
+                                    (sangre, orina, coprológico)</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Perfiles
+                                    (lipídico, renal, cardíaco y hormonales)</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Marcadores de
+                                    inflamación y control</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Estudios
+                                    especializados (biopsias, citologías y más)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       CIMO POPAYÁN (standalone featured)
+       ═══════════════════════════════════════ -->
+        <section class="cdo-d-section">
+            <div class="cdo-diag__wrap">
+
+                <div class="cdo-d-study cdo-d-study--cimo cdo-d-study--reverse" style="padding: 0;">
+                    <div class="cdo-d-study__visual">
+                        <div class="cdo-d-panel" style="background: linear-gradient(160deg, #f8fafd 0%, #eef3fa 100%);">
+                            <div class="cdo-d-panel__head">
+                                <div class="cdo-d-panel__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <h4 class="cdo-d-panel__title">Estudios destacados</h4>
+                            </div>
+                            <div class="cdo-d-studies-grid cdo-d-studies-grid--single">
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Resonancia
+                                    magnética (1.5 Tesla)</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Tomografía
+                                    computarizada (TAC)</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Ecografía de alta
+                                    resolución</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Radiología
+                                    convencional y especializada</div>
+                                <div class="cdo-d-study-tag"><span class="cdo-d-study-tag__dot"></span>Mamografía</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cdo-d-study__content">
+                        <span class="cdo-d-study__eyebrow">Popayán · Cauca</span>
+                        <h2 class="cdo-d-study__title">CIMO Popayán: Centro de Imágenes del Occidente</h2>
+                        <p class="cdo-d-study__copy">En Popayán, accede a estudios diagnósticos con tecnología avanzada
+                            y el respaldo clínico de la Clínica del Occidente.</p>
+
+                        <div class="cdo-d-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-d-bullets">
+                            <li><span class="check-icon" style="background:#e8f1fc;color:#1f549e;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Más de 20 años prestando servicios en la región</li>
+                            <li><span class="check-icon" style="background:#e8f1fc;color:#1f549e;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Apoyo de la Clínica del Occidente de Bogotá</li>
+                            <li><span class="check-icon" style="background:#e8f1fc;color:#1f549e;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Citas ágiles y entrega rápida de resultados</li>
+                            <li><span class="check-icon" style="background:#e8f1fc;color:#1f549e;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Equipos modernos para estudios precisos</li>
+                        </ul>
+
+                        <div class="cdo-d-study__cta-wrap">
+                            <a href="#" class="cdo-d-btn cdo-d-btn--blue">Agendar mi examen</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       UNIDAD DE ENDOSCOPIA
+       ═══════════════════════════════════════ -->
+        <section class="cdo-d-section cdo-d-section--alt">
+            <div class="cdo-diag__wrap">
+
+                <div class="cdo-d-study cdo-d-study--endoscopia" style="padding: 0; border-top: 0;">
+                    <div class="cdo-d-study__content">
+                        <span class="cdo-d-study__eyebrow">Digestivo</span>
+                        <h2 class="cdo-d-study__title">Unidad de endoscopia</h2>
+                        <p class="cdo-d-study__copy">Realizamos estudios de endoscopia digestiva que permiten
+                            diagnosticar y tratar diferentes condiciones del sistema digestivo de forma precisa y
+                            mínimamente invasiva.</p>
+
+                        <div class="cdo-d-block-label">¿Qué puedes esperar?</div>
+                        <ul class="cdo-d-bullets">
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Procedimientos mínimamente invasivos</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Visualización en alta definición</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Protocolos estrictos de seguridad</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Diagnóstico preciso y oportuno</li>
+                            <li><span class="check-icon" style="background:#f3e8fc;color:#7e2baf;"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>Procedimientos seguros y controlados</li>
+                        </ul>
+                    </div>
+
+                    <div class="cdo-d-study__visual">
+                        <div class="cdo-d-panel">
+                            <div class="cdo-d-panel__head">
+                                <div class="cdo-d-panel__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9" />
+                                        <path d="M21 12V3h-9" />
+                                        <path d="M21 3l-9 9" />
+                                    </svg>
+                                </div>
+                                <h4 class="cdo-d-panel__title">Estudios destacados</h4>
+                            </div>
+                            <div class="cdo-d-endo-cols">
+                                <div class="cdo-d-endo-block">
+                                    <h5 class="cdo-d-endo-block__title">Vías digestivas altas</h5>
+                                    <ul class="cdo-d-endo-list">
+                                        <li>Endoscopia digestiva alta</li>
+                                        <li>Esclerosis</li>
+                                        <li>Gastrostomía endoscópica</li>
+                                        <li>Extracción de cuerpos extraños</li>
+                                    </ul>
+                                </div>
+                                <div class="cdo-d-endo-block">
+                                    <h5 class="cdo-d-endo-block__title">Vías digestivas bajas</h5>
+                                    <ul class="cdo-d-endo-list">
+                                        <li>Colonoscopia total</li>
+                                        <li>Colonoscopia izquierda</li>
+                                        <li>Rectosigmoidoscopia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       APPOINTMENT
+       ═══════════════════════════════════════ -->
+        <section class="cdo-d-section">
+            <div class="cdo-diag__wrap">
+                <div class="cdo-d-appointment">
+                    <h2 class="cdo-d-appointment__title">Agenda tu cita</h2>
+                    <p class="cdo-d-appointment__copy">Elige la modalidad que mejor se ajuste a tu necesidad y reserva
+                        tu estudio diagnóstico.</p>
+                    <div class="cdo-d-appointment__buttons">
+                        <a href="#agendar-eps" class="cdo-d-btn cdo-d-btn--white">Agendar tu cita de EPS</a>
+                        <a href="#agendar-particular" class="cdo-d-btn cdo-d-btn--outline-white">Agendar tu cita
+                            particular</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       WHY US + DOCTOR TESTIMONIAL
+       ═══════════════════════════════════════ -->
+        <section class="cdo-d-section cdo-d-section--alt">
+            <div class="cdo-diag__wrap">
+
+                <div class="cdo-d-why">
+
+                    <div class="cdo-d-why__main">
+                        <h2 class="cdo-d-why__title">¿Por qué confiar tu diagnóstico en la Clínica del Occidente?</h2>
+                        <p class="cdo-d-why__copy">Somos un hospital de alta complejidad. Aplicamos el mismo rigor a
+                            cada estudio, desde una radiografía hasta procedimientos especializados, para entregarte
+                            resultados confiables y oportunos.</p>
+
+                        <div class="cdo-d-block-label">¿Qué nos diferencia?</div>
+                        <ul class="cdo-d-why__list">
+                            <li>
+                                <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>
+                                <div>
+                                    <strong>Atención ágil</strong>
+                                    <span class="desc">Procesos diseñados para reducir tus tiempos dentro de la
+                                        clínica.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>
+                                <div>
+                                    <strong>Infraestructura moderna</strong>
+                                    <span class="desc">Tecnología actualizada en una torre médica de alta
+                                        complejidad.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>
+                                <div>
+                                    <strong>Especialistas con experiencia</strong>
+                                    <span class="desc">Estudios analizados por médicos con amplia trayectoria.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg></span>
+                                <div>
+                                    <strong>Respaldo institucional</strong>
+                                    <span class="desc">Más de 40 años cuidando la salud en Bogotá.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cdo-d-doctor">
+                        <div class="cdo-d-doctor__quote-icon">"</div>
+                        <p class="cdo-d-doctor__text">Nuestro departamento de radiología presta un servicio
+                            personalizado con especialistas en diferentes áreas. Además, cuenta con un sistema de
+                            digitalización que garantiza una lectura oportuna y de calidad.</p>
+                        <div class="cdo-d-doctor__author">
+                            <div class="cdo-d-doctor__avatar">OG</div>
+                            <div class="cdo-d-doctor__info">
+                                <h4 class="cdo-d-doctor__name">Dr. Orlando González Brazo</h4>
+                                <p class="cdo-d-doctor__role">Coordinador de Radiología</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       BLOG + NEWSLETTER
+       ═══════════════════════════════════════ -->
+        <section class="cdo-d-section">
+            <div class="cdo-diag__wrap">
+                <div class="cdo-d-blog-news">
+
+                    <div class="cdo-d-blog-card">
+                        <div>
+                            <span class="cdo-d-blog-card__eyebrow">Nuestro blog</span>
+                            <h3 class="cdo-d-blog-card__title">Cuidémonos mejor</h3>
+                            <p class="cdo-d-blog-card__copy">Encuentra en nuestro blog una fuente virtual de noticias e
+                                información de interés para mejorar tu salud y la de tu familia.</p>
+                        </div>
+                        <div class="cdo-d-blog-card__action">
+                            <a href="https://www.clinicadeloccidente.com/noticias/cuidemonos-mejor/"
+                                class="cdo-d-btn cdo-d-btn--white">Leer más</a>
+                        </div>
+                    </div>
+
+                    <div class="cdo-d-news-card">
+                        <div>
+                            <span class="cdo-d-news-card__eyebrow">Boletín mensual</span>
+                            <h3 class="cdo-d-news-card__title">Suscríbete a nuestro boletín</h3>
+                            <p class="cdo-d-news-card__copy">Recibe noticias, consejos de salud y novedades de la
+                                Clínica del Occidente directamente en tu correo.</p>
+                        </div>
+                        <form class="cdo-d-news-form"
+                            onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+                            <input type="email" class="cdo-d-news-form__input" placeholder="Tu correo electrónico"
+                                required>
+                            <button type="submit" class="cdo-d-news-form__btn">Suscribirme</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

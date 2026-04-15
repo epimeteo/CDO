@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Patient – Clínica del Occidente</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f8fafd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page: International Patient – Clínica del Occidente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ── Reset & base ── */
+        .cdo-intl *,
+        .cdo-intl *::before,
+        .cdo-intl *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cdo-intl p,
+        .cdo-intl h1,
+        .cdo-intl h2,
+        .cdo-intl h3,
+        .cdo-intl h4 {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .cdo-intl,
+        .cdo-intl h1,
+        .cdo-intl h2,
+        .cdo-intl h3,
+        .cdo-intl h4,
+        .cdo-intl p,
+        .cdo-intl span,
+        .cdo-intl button,
+        .cdo-intl a,
+        .cdo-intl div,
+        .cdo-intl li,
+        .cdo-intl input {
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+        }
+
+        .cdo-intl {
+            --blue-dark: #1f549e;
+            --blue-light: #00a3de;
+            --purple: #7e2baf;
+            --orange: #ff7c10;
+            --gray: #7f7f7f;
+            --gray-light: #f4f6f9;
+            --gray-soft: #e8edf4;
+            --white: #ffffff;
+            --text: #2c2c2c;
+            --shadow-sm: 0 2px 8px rgba(31, 84, 158, .08);
+            --shadow-md: 0 8px 30px rgba(31, 84, 158, .12);
+            --shadow-lg: 0 16px 48px rgba(31, 84, 158, .16);
+            --radius: 16px;
+            --transition: .35s cubic-bezier(.4, 0, .2, 1);
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 36px;
+            --space-xl: 56px;
+            --space-2xl: 80px;
+
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            color: var(--text);
+            background: linear-gradient(180deg, #f8fafd 0%, #eef3fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cdo-intl__wrap {
+            max-width: 1200px;
+            margin: 0 auto !important;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════ */
+        .cdo-i-hero {
+            position: relative;
+            padding: 96px 0 80px;
+            background:
+                radial-gradient(ellipse at top right, rgba(0, 163, 222, .12) 0%, transparent 55%),
+                radial-gradient(ellipse at bottom left, rgba(126, 43, 175, .08) 0%, transparent 55%),
+                linear-gradient(180deg, #f8fafd 0%, #eef3fa 100%);
+            overflow: hidden;
+        }
+
+        /* Globe-like decorative arcs */
+        .cdo-i-hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -120px;
+            width: 460px;
+            height: 460px;
+            border: 1px solid rgba(31, 84, 158, .10);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cdo-i-hero::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -70px;
+            width: 360px;
+            height: 360px;
+            border: 1px dashed rgba(0, 163, 222, .16);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cdo-i-hero__content {
+            text-align: center !important;
+            max-width: 900px;
+            margin: 0 auto !important;
+            position: relative;
+        }
+
+        .cdo-i-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+            color: #fff !important;
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 7px 22px;
+            border-radius: 100px;
+            margin-bottom: var(--space-md) !important;
+            line-height: 1.4 !important;
+        }
+
+        .cdo-i-hero__badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .cdo-intl .cdo-i-hero__title {
+            font-size: clamp(32px, 4.4vw, 52px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.12 !important;
+            margin: 0 0 var(--space-md) !important;
+            letter-spacing: -0.5px;
+        }
+
+        .cdo-intl .cdo-i-hero__copy {
+            font-size: clamp(15px, 1.4vw, 17px) !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 auto !important;
+            max-width: 720px;
+        }
+
+        /* Hero stats */
+        .cdo-i-hero__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-2xl);
+        }
+
+        .cdo-i-stat {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            box-shadow: var(--shadow-sm);
+            text-align: center !important;
+            transition: transform var(--transition), box-shadow var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .cdo-i-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cdo-i-hero__stats>.cdo-i-stat:nth-child(1) {
+            border-top-color: var(--blue-light);
+        }
+
+        .cdo-i-hero__stats>.cdo-i-stat:nth-child(2) {
+            border-top-color: var(--purple);
+        }
+
+        .cdo-i-hero__stats>.cdo-i-stat:nth-child(3) {
+            border-top-color: var(--orange);
+        }
+
+        .cdo-i-stat__icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-sm) !important;
+        }
+
+        .cdo-i-hero__stats>.cdo-i-stat:nth-child(1) .cdo-i-stat__icon {
+            background: linear-gradient(135deg, #e8f1fc, #d0e5fa);
+        }
+
+        .cdo-i-hero__stats>.cdo-i-stat:nth-child(2) .cdo-i-stat__icon {
+            background: linear-gradient(135deg, #f0e5f8, #e0ccf0);
+        }
+
+        .cdo-i-hero__stats>.cdo-i-stat:nth-child(3) .cdo-i-stat__icon {
+            background: linear-gradient(135deg, #fff0e0, #ffe0c0);
+        }
+
+        .cdo-intl .cdo-i-stat__title {
+            font-size: 16.5px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.3 !important;
+            margin: 0 0 8px !important;
+        }
+
+        .cdo-intl .cdo-i-stat__desc {
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.55 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     SECTION COMMONS
+     ════════════════════════════════════════ */
+        .cdo-i-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .cdo-i-section--alt {
+            background: var(--white);
+        }
+
+        .cdo-i-section__head {
+            text-align: center !important;
+            max-width: 760px;
+            margin: 0 auto var(--space-xl) !important;
+        }
+
+        .cdo-i-section__eyebrow {
+            display: inline-block;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-intl .cdo-i-section__title {
+            font-size: clamp(26px, 3.2vw, 38px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-intl .cdo-i-section__lead {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 !important;
+        }
+
+        /* ── Universal buttons ── */
+        .cdo-intl .cdo-i-btn {
+            display: inline-block;
+            padding: 14px 30px !important;
+            border-radius: 100px;
+            font-family: 'Montserrat', Helvetica, sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            text-align: center !important;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition);
+            color: #ffffff !important;
+            line-height: 1.4 !important;
+        }
+
+        .cdo-intl .cdo-i-btn:visited,
+        .cdo-intl .cdo-i-btn:hover,
+        .cdo-intl .cdo-i-btn:active,
+        .cdo-intl .cdo-i-btn:focus {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .cdo-i-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        .cdo-i-btn--block {
+            display: block !important;
+            width: 100%;
+            margin-top: auto !important;
+        }
+
+        .cdo-i-btn--blue {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+            box-shadow: 0 6px 18px rgba(31, 84, 158, .22);
+        }
+
+        .cdo-i-btn--purple {
+            background: linear-gradient(135deg, var(--purple), #a855d6);
+            box-shadow: 0 6px 18px rgba(126, 43, 175, .22);
+        }
+
+        .cdo-i-btn--orange {
+            background: linear-gradient(135deg, var(--orange), #ff9a40);
+            box-shadow: 0 6px 18px rgba(255, 124, 16, .25);
+        }
+
+        .cdo-intl .cdo-i-btn--white {
+            background: #fff;
+            color: var(--blue-dark) !important;
+        }
+
+        .cdo-intl .cdo-i-btn--white:hover {
+            color: var(--blue-dark) !important;
+            background: #fff;
+        }
+
+        .cdo-intl .cdo-i-btn--outline-white {
+            background: transparent;
+            color: #fff !important;
+            border: 2px solid rgba(255, 255, 255, .6);
+        }
+
+        .cdo-intl .cdo-i-btn--outline-white:hover {
+            background: rgba(255, 255, 255, .12);
+            color: #fff !important;
+        }
+
+        /* Block label */
+        .cdo-i-block-label {
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--blue-dark);
+            margin: 0 0 var(--space-sm) !important;
+            padding: 0 0 10px !important;
+            border-bottom: 2px solid var(--gray-soft);
+            display: block;
+        }
+
+        /* Bullet list */
+        .cdo-i-bullets {
+            list-style: none !important;
+            margin: 0 0 var(--space-lg) !important;
+            padding: 0 !important;
+        }
+
+        .cdo-i-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0 !important;
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            color: #3a3a3a;
+            line-height: 1.5 !important;
+        }
+
+        .cdo-i-bullets li:not(:last-child) {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cdo-i-bullets .check-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .cdo-i-bullets .check-icon svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* ════════════════════════════════════════
+     PATHWAY CARDS (Specialized Centers + Medical Services)
+     ════════════════════════════════════════ */
+        .cdo-i-pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            align-items: stretch;
+        }
+
+        .cdo-i-pathway {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition), box-shadow var(--transition);
+            height: 100%;
+            position: relative;
+        }
+
+        .cdo-i-pathway:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cdo-i-pathway__topbar {
+            height: 8px;
+            width: 100%;
+        }
+
+        .cdo-i-pathway--centers .cdo-i-pathway__topbar {
+            background: linear-gradient(90deg, var(--blue-dark), var(--blue-light));
+        }
+
+        .cdo-i-pathway--services .cdo-i-pathway__topbar {
+            background: linear-gradient(90deg, var(--purple), var(--blue-light));
+        }
+
+        .cdo-i-pathway__body {
+            padding: 40px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .cdo-i-pathway__header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: var(--space-md) !important;
+        }
+
+        .cdo-i-pathway__icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cdo-i-pathway--centers .cdo-i-pathway__icon {
+            background: linear-gradient(135deg, #e8f1fc, #d0e5fa);
+            color: var(--blue-dark);
+        }
+
+        .cdo-i-pathway--services .cdo-i-pathway__icon {
+            background: linear-gradient(135deg, #f0e5f8, #e0ccf0);
+            color: var(--purple);
+        }
+
+        .cdo-intl .cdo-i-pathway__title {
+            font-size: clamp(20px, 2.2vw, 24px) !important;
+            font-weight: 800 !important;
+            line-height: 1.25 !important;
+            margin: 0 !important;
+        }
+
+        .cdo-i-pathway--centers .cdo-i-pathway__title {
+            color: var(--blue-dark) !important;
+        }
+
+        .cdo-i-pathway--services .cdo-i-pathway__title {
+            color: var(--purple) !important;
+        }
+
+        .cdo-intl .cdo-i-pathway__copy {
+            font-size: 14.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 0 var(--space-lg) !important;
+        }
+
+        .cdo-i-pathway__row {
+            margin-bottom: var(--space-md) !important;
+        }
+
+        .cdo-i-pathway__row-label {
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--blue-dark);
+            margin: 0 0 8px !important;
+            display: block;
+        }
+
+        .cdo-intl .cdo-i-pathway__row-text {
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            color: #3a3a3a;
+            line-height: 1.55 !important;
+            margin: 0 !important;
+        }
+
+        .cdo-i-pathway__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .cdo-i-pathway__tag {
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            padding: 5px 12px;
+            border-radius: 100px;
+            line-height: 1.3 !important;
+        }
+
+        .cdo-i-pathway--centers .cdo-i-pathway__tag {
+            background: rgba(0, 163, 222, .10);
+            color: var(--blue-dark);
+        }
+
+        .cdo-i-pathway--services .cdo-i-pathway__tag {
+            background: rgba(126, 43, 175, .10);
+            color: var(--purple);
+        }
+
+        .cdo-i-pathway__cta-wrap {
+            margin-top: auto;
+            padding-top: var(--space-md);
+        }
+
+        /* ════════════════════════════════════════
+     EXPERIENCE BLOCK (visual + content split)
+     ════════════════════════════════════════ */
+        .cdo-i-experience {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 56px;
+            align-items: center;
+        }
+
+        .cdo-i-experience__visual {
+            position: relative;
+            min-height: 420px;
+            border-radius: 24px;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(31, 84, 158, .92) 0%, rgba(0, 163, 222, .85) 50%, rgba(126, 43, 175, .88) 100%);
+            padding: 44px 40px;
+            color: #fff !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cdo-i-experience__visual::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 280px;
+            height: 280px;
+            border: 1.5px solid rgba(255, 255, 255, .15);
+            border-radius: 50%;
+        }
+
+        .cdo-i-experience__visual::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -60px;
+            width: 240px;
+            height: 240px;
+            border: 1.5px solid rgba(255, 255, 255, .1);
+            border-radius: 50%;
+        }
+
+        .cdo-i-experience__journey {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: var(--space-lg) !important;
+        }
+
+        .cdo-i-experience__pill {
+            background: rgba(255, 255, 255, .18);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 100px;
+            padding: 10px 18px;
+            font-size: 12.5px !important;
+            font-weight: 600 !important;
+            color: #fff !important;
+            line-height: 1.3 !important;
+            white-space: nowrap;
+        }
+
+        .cdo-i-experience__journey-arrow {
+            color: rgba(255, 255, 255, .6) !important;
+            font-size: 18px !important;
+            flex-shrink: 0;
+        }
+
+        .cdo-intl .cdo-i-experience__heading {
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .85) !important;
+            margin: 0 0 12px !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-intl .cdo-i-experience__big {
+            font-size: clamp(28px, 3.4vw, 40px) !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.15 !important;
+            margin: 0 !important;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.4px;
+        }
+
+        .cdo-i-experience__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cdo-i-experience__eyebrow {
+            display: inline-block;
+            font-size: 11.5px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            background: rgba(0, 163, 222, .10);
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin: 0 0 var(--space-sm) !important;
+            align-self: flex-start;
+        }
+
+        .cdo-intl .cdo-i-experience__title {
+            font-size: clamp(26px, 3vw, 36px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-md) !important;
+        }
+
+        .cdo-intl .cdo-i-experience__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.7 !important;
+            margin: 0 0 var(--space-lg) !important;
+        }
+
+        /* Numbered steps list */
+        .cdo-i-steps {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            counter-reset: i-step;
+        }
+
+        .cdo-i-steps li {
+            counter-increment: i-step;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 14px 0 !important;
+            border-bottom: 1px solid var(--gray-soft);
+            font-size: 14.5px !important;
+            font-weight: 500 !important;
+            color: #3a3a3a;
+            line-height: 1.5 !important;
+        }
+
+        .cdo-i-steps li:last-child {
+            border-bottom: none;
+        }
+
+        .cdo-i-steps li::before {
+            content: counter(i-step);
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+            color: #fff !important;
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1 !important;
+        }
+
+        /* ════════════════════════════════════════
+     WHY BOGOTÁ — KPI HIGHLIGHT
+     ════════════════════════════════════════ */
+        .cdo-i-bogota {
+            background: linear-gradient(135deg, #1f549e 0%, #2a6dc0 50%, #00a3de 100%);
+            border-radius: 24px;
+            padding: 64px 56px;
+            color: #fff !important;
+            position: relative;
+            overflow: hidden;
+            text-align: center !important;
+        }
+
+        .cdo-i-bogota::before,
+        .cdo-i-bogota::after {
+            content: '';
+            position: absolute;
+            border: 1.5px solid rgba(255, 255, 255, .12);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cdo-i-bogota::before {
+            top: -120px;
+            right: -120px;
+            width: 360px;
+            height: 360px;
+        }
+
+        .cdo-i-bogota::after {
+            bottom: -100px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .cdo-i-bogota__pin {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 100px;
+            padding: 8px 18px;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #fff !important;
+            margin-bottom: var(--space-md) !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-i-bogota__pin svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .cdo-intl .cdo-i-bogota__title {
+            font-size: clamp(28px, 3.6vw, 42px) !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.2 !important;
+            margin: 0 auto var(--space-md) !important;
+            max-width: 760px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.4px;
+        }
+
+        .cdo-intl .cdo-i-bogota__copy {
+            font-size: 15.5px !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, .92) !important;
+            line-height: 1.7 !important;
+            margin: 0 auto var(--space-xl) !important;
+            max-width: 720px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-i-bogota__kpis {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            max-width: 880px;
+            margin: 0 auto !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cdo-i-kpi {
+            background: rgba(255, 255, 255, .10);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 16px;
+            padding: 24px 20px;
+        }
+
+        .cdo-intl .cdo-i-kpi__big {
+            font-size: 32px !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.1 !important;
+            margin: 0 0 4px !important;
+            letter-spacing: -0.5px;
+        }
+
+        .cdo-intl .cdo-i-kpi__label {
+            font-size: 12.5px !important;
+            font-weight: 500 !important;
+            color: rgba(255, 255, 255, .85) !important;
+            line-height: 1.45 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     WHY CHOOSE US (alt — list with icons)
+     ════════════════════════════════════════ */
+        .cdo-i-why {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 56px 48px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cdo-i-why__head {
+            text-align: center !important;
+            max-width: 720px;
+            margin: 0 auto var(--space-xl) !important;
+        }
+
+        .cdo-intl .cdo-i-why__title {
+            font-size: clamp(24px, 2.8vw, 34px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.2 !important;
+            margin: 0 0 var(--space-sm) !important;
+        }
+
+        .cdo-intl .cdo-i-why__copy {
+            font-size: 15px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.65 !important;
+            margin: 0 !important;
+        }
+
+        .cdo-i-why__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+
+        .cdo-i-why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 24px 26px;
+            background: var(--gray-light);
+            border-radius: 14px;
+            transition: background var(--transition), transform var(--transition);
+        }
+
+        .cdo-i-why-item:hover {
+            background: #eaf1fa;
+            transform: translateX(3px);
+        }
+
+        .cdo-i-why-item__icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff !important;
+        }
+
+        .cdo-i-why__grid>.cdo-i-why-item:nth-child(1) .cdo-i-why-item__icon {
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+        }
+
+        .cdo-i-why__grid>.cdo-i-why-item:nth-child(2) .cdo-i-why-item__icon {
+            background: linear-gradient(135deg, var(--purple), #a855d6);
+        }
+
+        .cdo-i-why__grid>.cdo-i-why-item:nth-child(3) .cdo-i-why-item__icon {
+            background: linear-gradient(135deg, var(--orange), #ff9a40);
+        }
+
+        .cdo-i-why__grid>.cdo-i-why-item:nth-child(4) .cdo-i-why-item__icon {
+            background: linear-gradient(135deg, var(--blue-light), var(--purple));
+        }
+
+        .cdo-intl .cdo-i-why-item__title {
+            font-size: 15.5px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.3 !important;
+            margin: 0 0 6px !important;
+        }
+
+        .cdo-intl .cdo-i-why-item__desc {
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.55 !important;
+            margin: 0 !important;
+        }
+
+        /* ════════════════════════════════════════
+     START YOUR JOURNEY CTA + STEPS
+     ════════════════════════════════════════ */
+        .cdo-i-start {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 64px 56px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cdo-intl .cdo-i-start__title {
+            font-size: clamp(28px, 3.4vw, 40px) !important;
+            font-weight: 800 !important;
+            color: var(--blue-dark);
+            line-height: 1.18 !important;
+            margin: 0 0 var(--space-md) !important;
+            letter-spacing: -0.3px;
+        }
+
+        .cdo-intl .cdo-i-start__copy {
+            font-size: 15.5px !important;
+            font-weight: 400 !important;
+            color: var(--gray);
+            line-height: 1.7 !important;
+            margin: 0 0 var(--space-lg) !important;
+        }
+
+        .cdo-i-start__cta-row {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .cdo-i-start__steps-wrap {
+            background: linear-gradient(160deg, #f8fafd 0%, #eef3fa 100%);
+            border-radius: var(--radius);
+            padding: 32px 30px;
+            border: 1px solid var(--gray-soft);
+        }
+
+        .cdo-i-start__steps-label {
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin: 0 0 var(--space-md) !important;
+            display: block;
+        }
+
+        .cdo-intl .cdo-i-start__steps-title {
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            color: var(--blue-dark);
+            line-height: 1.3 !important;
+            margin: 0 0 var(--space-md) !important;
+        }
+
+        /* ════════════════════════════════════════
+     RESPONSIVE
+     ════════════════════════════════════════ */
+        @media (max-width: 960px) {
+            .cdo-i-hero {
+                padding: 64px 0 56px;
+            }
+
+            .cdo-i-section {
+                padding: 56px 0;
+            }
+
+            .cdo-i-hero__stats,
+            .cdo-i-pathway-grid,
+            .cdo-i-why__grid,
+            .cdo-i-bogota__kpis {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .cdo-i-hero__stats {
+                margin-top: 48px;
+            }
+
+            .cdo-i-experience {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .cdo-i-experience__visual {
+                min-height: 320px;
+                padding: 36px 28px;
+            }
+
+            .cdo-i-experience__journey {
+                flex-wrap: wrap;
+            }
+
+            .cdo-i-start {
+                grid-template-columns: 1fr;
+                padding: 40px 28px;
+                gap: 36px;
+            }
+
+            .cdo-i-bogota {
+                padding: 48px 28px;
+                border-radius: 18px;
+            }
+
+            .cdo-i-why {
+                padding: 40px 28px;
+            }
+
+            .cdo-i-pathway__body {
+                padding: 32px 24px 28px;
+            }
+
+            .cdo-i-start__cta-row .cdo-i-btn {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+
+        @media (min-width: 961px) and (max-width: 1100px) {
+            .cdo-i-experience {
+                gap: 36px;
+            }
+
+            .cdo-i-start {
+                padding: 48px 36px;
+                gap: 36px;
+            }
+
+            .cdo-i-bogota {
+                padding: 52px 36px;
+            }
+        }
+    </style>
+
+    <div class="cdo-intl">
+
+        <!-- ═══════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════ -->
+        <section class="cdo-i-hero">
+            <div class="cdo-intl__wrap">
+                <div class="cdo-i-hero__content">
+                    <span class="cdo-i-hero__badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                        International Patient
+                    </span>
+                    <h1 class="cdo-i-hero__title">Advanced medical care in Colombia, designed for international patients
+                    </h1>
+                    <p class="cdo-i-hero__copy">Access high-complexity medical care with personalized support at every
+                        step. At Clínica del Occidente, we combine clinical expertise, efficient coordination, and a
+                        seamless international experience so you can focus on your health.</p>
+                </div>
+
+                <div class="cdo-i-hero__stats">
+                    <div class="cdo-i-stat">
+                        <div class="cdo-i-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#1f549e" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-i-stat__title">International access</h3>
+                        <p class="cdo-i-stat__desc">Located in Bogotá, a leading medical destination in Latin America.
+                        </p>
+                    </div>
+                    <div class="cdo-i-stat">
+                        <div class="cdo-i-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#7e2baf" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-i-stat__title">Hospital-level safety</h3>
+                        <p class="cdo-i-stat__desc">Care delivered within a fully equipped Level IV hospital.</p>
+                    </div>
+                    <div class="cdo-i-stat">
+                        <div class="cdo-i-stat__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ff7c10" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="30" height="30">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 class="cdo-i-stat__title">Personalized coordination</h3>
+                        <p class="cdo-i-stat__desc">Bilingual support from your first contact to your arrival.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       MEDICAL PATHWAY
+       ═══════════════════════════════════════ -->
+        <section class="cdo-i-section cdo-i-section--alt">
+            <div class="cdo-intl__wrap">
+                <div class="cdo-i-section__head">
+                    <span class="cdo-i-section__eyebrow">Your Care Plan</span>
+                    <h2 class="cdo-i-section__title">Choose your medical pathway</h2>
+                    <p class="cdo-i-section__lead">Two clear options designed to match your needs — whether you are
+                        seeking a specialized procedure or comprehensive medical evaluation.</p>
+                </div>
+
+                <div class="cdo-i-pathway-grid">
+
+                    <!-- Specialized Centers -->
+                    <div class="cdo-i-pathway cdo-i-pathway--centers">
+                        <div class="cdo-i-pathway__topbar"></div>
+                        <div class="cdo-i-pathway__body">
+                            <div class="cdo-i-pathway__header">
+                                <div class="cdo-i-pathway__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                                        <path
+                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                    </svg>
+                                </div>
+                                <h3 class="cdo-i-pathway__title">Specialized Centers of Excellence</h3>
+                            </div>
+                            <p class="cdo-i-pathway__copy">Advanced treatment programs for complex conditions and
+                                surgical care.</p>
+
+                            <div class="cdo-i-pathway__row">
+                                <span class="cdo-i-pathway__row-label">Key Services</span>
+                                <div class="cdo-i-pathway__tags">
+                                    <span class="cdo-i-pathway__tag">Bariatric Surgery</span>
+                                    <span class="cdo-i-pathway__tag">Plastic & Aesthetic Surgery</span>
+                                    <span class="cdo-i-pathway__tag">Obesity Management</span>
+                                    <span class="cdo-i-pathway__tag">Oncology (IOMED)</span>
+                                </div>
+                            </div>
+
+                            <div class="cdo-i-pathway__row">
+                                <span class="cdo-i-pathway__row-label">Best for</span>
+                                <p class="cdo-i-pathway__row-text">Patients seeking specialized procedures or
+                                    coordinated treatment for complex conditions.</p>
+                            </div>
+
+                            <div class="cdo-i-pathway__cta-wrap">
+                                <a href="#specialized-centers"
+                                    class="cdo-i-btn cdo-i-btn--blue cdo-i-btn--block">Explore Specialized Centers</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medical & Diagnostic Services -->
+                    <div class="cdo-i-pathway cdo-i-pathway--services">
+                        <div class="cdo-i-pathway__topbar"></div>
+                        <div class="cdo-i-pathway__body">
+                            <div class="cdo-i-pathway__header">
+                                <div class="cdo-i-pathway__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                    </svg>
+                                </div>
+                                <h3 class="cdo-i-pathway__title">Medical & Diagnostic Services</h3>
+                            </div>
+                            <p class="cdo-i-pathway__copy">Comprehensive diagnostics and clinical services to support
+                                your treatment.</p>
+
+                            <div class="cdo-i-pathway__row">
+                                <span class="cdo-i-pathway__row-label">Key Services</span>
+                                <div class="cdo-i-pathway__tags">
+                                    <span class="cdo-i-pathway__tag">Executive Check-ups</span>
+                                    <span class="cdo-i-pathway__tag">Imaging & MRI</span>
+                                    <span class="cdo-i-pathway__tag">Laboratory</span>
+                                    <span class="cdo-i-pathway__tag">Emergency Care</span>
+                                </div>
+                            </div>
+
+                            <div class="cdo-i-pathway__row">
+                                <span class="cdo-i-pathway__row-label">Best for</span>
+                                <p class="cdo-i-pathway__row-text">Patients seeking evaluations, preventive care, or
+                                    diagnostic support.</p>
+                            </div>
+
+                            <div class="cdo-i-pathway__cta-wrap">
+                                <a href="#medical-services" class="cdo-i-btn cdo-i-btn--purple cdo-i-btn--block">View
+                                    Medical Services</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       INTERNATIONAL PATIENT EXPERIENCE
+       ═══════════════════════════════════════ -->
+        <section class="cdo-i-section">
+            <div class="cdo-intl__wrap">
+
+                <div class="cdo-i-experience">
+
+                    <div class="cdo-i-experience__visual">
+                        <div>
+                            <span class="cdo-i-experience__heading">Your medical journey</span>
+                            <h3 class="cdo-i-experience__big">Coordinated, end-to-end, in one place.</h3>
+                        </div>
+                        <div class="cdo-i-experience__journey">
+                            <span class="cdo-i-experience__pill">First contact</span>
+                            <span class="cdo-i-experience__journey-arrow">→</span>
+                            <span class="cdo-i-experience__pill">Travel</span>
+                            <span class="cdo-i-experience__journey-arrow">→</span>
+                            <span class="cdo-i-experience__pill">Treatment</span>
+                            <span class="cdo-i-experience__journey-arrow">→</span>
+                            <span class="cdo-i-experience__pill">Recovery</span>
+                        </div>
+                    </div>
+
+                    <div class="cdo-i-experience__content">
+                        <span class="cdo-i-experience__eyebrow">The Experience</span>
+                        <h2 class="cdo-i-experience__title">The international patient experience</h2>
+                        <p class="cdo-i-experience__copy">We coordinate every aspect of your medical journey so you can
+                            focus on your treatment and recovery.</p>
+
+                        <div class="cdo-i-block-label">How we assist you</div>
+                        <ul class="cdo-i-steps">
+                            <li>Bilingual patient coordination</li>
+                            <li>Travel and accommodation guidance</li>
+                            <li>Fast-track medical scheduling</li>
+                            <li>Virtual consultations before your trip</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       WHY BOGOTÁ
+       ═══════════════════════════════════════ -->
+        <section class="cdo-i-section cdo-i-section--alt">
+            <div class="cdo-intl__wrap">
+                <div class="cdo-i-bogota">
+                    <span class="cdo-i-bogota__pin">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Bogotá · Colombia
+                    </span>
+                    <h2 class="cdo-i-bogota__title">Why international patients choose Bogotá</h2>
+                    <p class="cdo-i-bogota__copy">Bogotá is one of Latin America's leading medical hubs, offering
+                        high-quality healthcare, modern infrastructure, and shorter waiting times compared to many
+                        countries.</p>
+
+                    <div class="cdo-i-bogota__kpis">
+                        <div class="cdo-i-kpi">
+                            <div class="cdo-i-kpi__big">High</div>
+                            <p class="cdo-i-kpi__label">International healthcare standards</p>
+                        </div>
+                        <div class="cdo-i-kpi">
+                            <div class="cdo-i-kpi__big">Modern</div>
+                            <p class="cdo-i-kpi__label">Infrastructure & medical technology</p>
+                        </div>
+                        <div class="cdo-i-kpi">
+                            <div class="cdo-i-kpi__big">Shorter</div>
+                            <p class="cdo-i-kpi__label">Waiting times for specialized care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       WHY CLÍNICA DEL OCCIDENTE
+       ═══════════════════════════════════════ -->
+        <section class="cdo-i-section">
+            <div class="cdo-intl__wrap">
+                <div class="cdo-i-why">
+                    <div class="cdo-i-why__head">
+                        <h2 class="cdo-i-why__title">Why Clínica del Occidente?</h2>
+                        <p class="cdo-i-why__copy">A high-complexity hospital with the capabilities to diagnose, treat,
+                            and follow your care in one place.</p>
+                    </div>
+
+                    <div class="cdo-i-why__grid">
+                        <div class="cdo-i-why-item">
+                            <div class="cdo-i-why-item__icon">
+                                <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                    <path d="M3 12h3l3-9 4 18 3-9h5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="cdo-i-why-item__title">Integrated care from diagnosis to recovery</h3>
+                                <p class="cdo-i-why-item__desc">Every stage of your medical journey is handled in a
+                                    single, coordinated environment.</p>
+                            </div>
+                        </div>
+                        <div class="cdo-i-why-item">
+                            <div class="cdo-i-why-item__icon">
+                                <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="cdo-i-why-item__title">More than 40 years of clinical experience</h3>
+                                <p class="cdo-i-why-item__desc">A trusted medical institution with decades of expertise
+                                    serving patients in Colombia and abroad.</p>
+                            </div>
+                        </div>
+                        <div class="cdo-i-why-item">
+                            <div class="cdo-i-why-item__icon">
+                                <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                    <path d="M3 7h18v13H3z" />
+                                    <path d="M3 7l3-4h12l3 4" />
+                                    <path d="M12 11v4" />
+                                    <path d="M10 13h4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="cdo-i-why-item__title">High-complexity hospital with integrated services</h3>
+                                <p class="cdo-i-why-item__desc">Surgery, hospitalization, ICU, imaging and labs — all
+                                    under one roof.</p>
+                            </div>
+                        </div>
+                        <div class="cdo-i-why-item">
+                            <div class="cdo-i-why-item__icon">
+                                <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="cdo-i-why-item__title">Strategic location near hotels and services</h3>
+                                <p class="cdo-i-why-item__desc">Conveniently positioned for international visitors, with
+                                    comfortable lodging options nearby.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+       START YOUR JOURNEY
+       ═══════════════════════════════════════ -->
+        <section class="cdo-i-section">
+            <div class="cdo-intl__wrap">
+                <div class="cdo-i-start">
+
+                    <div>
+                        <h2 class="cdo-i-start__title">Start your medical journey</h2>
+                        <p class="cdo-i-start__copy">Our International Patient team at Clínica del Occidente coordinates
+                            your care from your first contact through your arrival in Colombia.</p>
+                        <div class="cdo-i-start__cta-row">
+                            <a href="#contact" class="cdo-i-btn cdo-i-btn--blue">Contact our team</a>
+                            <a href="#virtual-consultation" class="cdo-i-btn cdo-i-btn--purple">Schedule a virtual
+                                consultation</a>
+                        </div>
+                    </div>
+
+                    <div class="cdo-i-start__steps-wrap">
+                        <span class="cdo-i-start__steps-label">Next steps</span>
+                        <h3 class="cdo-i-start__steps-title">What happens next?</h3>
+                        <ul class="cdo-i-steps">
+                            <li>Medical scheduling with specialized physicians</li>
+                            <li>Travel and accommodation guidance</li>
+                            <li>Cost estimation and treatment planning</li>
+                            <li>Assistance with medical documentation</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
